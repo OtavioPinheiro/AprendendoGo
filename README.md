@@ -23,7 +23,7 @@ Esse operador é diferente do operador de atribuição `=`. Cuidado para não co
 O blank identifier serve para dizer ao programa ignorar um retorno de informações recebido por uma função. É representado pelo caractere `_`.
 
 ### Variáveis
-Variáveis em GO pode ser declarada das seguintes formas:
+Variáveis em GO podem ser declaradas das seguintes formas:
 ```
   var i int -> Declaração da variável
   i = 42 -> Inicialização da variável
