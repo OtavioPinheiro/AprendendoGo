@@ -7,7 +7,7 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [Constantes](#constantes)
   
 ## O que é Go Lang?
-A linguagem Go é ...
+A linguagem Go é uma linguagem de programação criada pela Google e lançada em códgio livre em 2009. É uma linguagem compilada e focada em produtividade e programação concorrente, baseada em trabalhos feitos no sistema operacional chamado Inferno.
 
 ## Começando o estudo.
 
