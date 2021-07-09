@@ -26,4 +26,9 @@ func main() {
 	rsp = txt + fmt.Sprint(10)
 	fmt.Println(rsp)
 	fmt.Println("Lá lá lá " + cantando)
+	fmt.Printf("\n")
+
+	num := 255
+	fmt.Println("Conversão de decimais para binário e para hexadecimais:")
+	fmt.Printf("decimal: %d\tbinário: %b\thexadecimal: %#x", num, num, num)
 }

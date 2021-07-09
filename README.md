@@ -58,7 +58,7 @@ Já o *Raw String Literal* são strings cruas que não serão interpretadas.<br>
 
 **Atenção**: Para Raw Strings utiliza-se o acento grave ``.
 
-#### Tipo string (cadeia de caracteres)
+### Tipo string (cadeia de caracteres)
 - Strings são sequências de bytes.
 - são imutáveis
 - Uma string é uma fatia de bytes (*slice of bytes*)
@@ -73,6 +73,13 @@ Já o *Raw String Literal* são strings cruas que não serão interpretadas.<br>
 - **fmt.Fprint():** Escreve a string, passada como argumento, em um arquivo.
 - **fmt.Fprintf():** Escreve a string, passada como argumento, em um arquivo. Permite formatações.
 - **fmt.Fprintln():** Escreve a string, passada como argumento, em um arquivo. Insere uma quebra de linha (`\n`) ao final da string.
+
+### Iota
+São números sequênciais atribuídos automáticamente pelo sistema.
+
+**Exemplos:** ```const (a = iota, b = iota, c = iota)```
+
+**Resultado:** ```a = 0, b = 1, c = 2```
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
