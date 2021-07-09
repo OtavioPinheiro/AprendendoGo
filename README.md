@@ -16,6 +16,7 @@ A linguagem Go é uma linguagem de programação criada pela Google e lançada e
 2. Go é uma lingaugem de tipagem estática.
 3. Quando uma variável é declarada fora de um codeblock scope e não é atribuída a um valor neste momento, ela só poderá receber um valor dentro de um codeblock.
 4. Slice array, struct, map -> Tipos de dados compostos
+5. Todo valor em Go pertence também ao tipo de interface vazia, representado pela notação "interface{}"
 
 ### Operador curto de declaração
 É representado por `:=`. É utilizado na declaração de variáveis. O diferencial é que esse operador possui tipagem automática, ou seja, não é necessário informar o tipo da variável quando utilizamos o operador curto de declaração e só podemos utilizar esse operador dentro de um *codeblocks* (escopo).
