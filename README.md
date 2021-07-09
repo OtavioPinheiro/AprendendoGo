@@ -17,6 +17,7 @@ A linguagem Go é uma linguagem de programação criada pela Google e lançada e
 3. Quando uma variável é declarada fora de um codeblock scope e não é atribuída a um valor neste momento, ela só poderá receber um valor dentro de um codeblock.
 4. Slice array, struct, map -> Tipos de dados compostos
 5. Todo valor em Go pertence também ao tipo de interface vazia, representado pela notação "interface{}"
+6. Em Go strings são imutáveis. Para alterar uma string é necessário criar outra string com a alteração desejada.
 
 ### Operador curto de declaração
 É representado por `:=`. É utilizado na declaração de variáveis. O diferencial é que esse operador possui tipagem automática, ou seja, não é necessário informar o tipo da variável quando utilizamos o operador curto de declaração e só podemos utilizar esse operador dentro de um *codeblocks* (escopo).
@@ -56,6 +57,11 @@ Valores zeros nos diferentes tipos de variáveis:
 Já o *Raw String Literal* são strings cruas que não serão interpretadas.<br>**Exemplo:** ```fmt.Printf(`Olá!\nTudo bem?\tEspero que sim.`)```
 
 **Atenção**: Para Raw Strings utiliza-se o acento grave ``.
+
+#### Tipo string (cadeia de caracteres)
+- Strings são sequências de bytes.
+- são imutáveis
+- Uma string é uma fatia de bytes (*slice of bytes*)
 
 ### Pacote fmt
 - **fmt.Print():** Exibe na tela a string passada como argumento.
