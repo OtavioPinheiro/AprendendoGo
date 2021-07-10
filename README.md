@@ -82,6 +82,9 @@ São números sequênciais atribuídos automáticamente pelo sistema.
 
 **Resultado:** ```a = 0, b = 1, c = 2```
 
+### Switch e case
+É igual para todas as linguagens que utilizam *switch case*, ou seja, o *switch* irá comparar a expressão condicional informada logo após a sua declaração com a expressão condicional declarada nos *cases*, caso verdadeira executará o código dentro dos respectivos *cases*, senão seguirá para o *default*. Uma diferença é que em GO existe o termo `fallthrough` que faz com que o próximo *case* também seja executado caso o *case* com *fallthrough* seja verdadeiro.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
