@@ -85,6 +85,26 @@ São números sequênciais atribuídos automáticamente pelo sistema.
 ### Switch e case
 É igual para todas as linguagens que utilizam *switch case*, ou seja, o *switch* irá comparar o valor da variável informada com o valor declarado nos *cases*, caso verdadeira, executará o código dentro dos respectivos *cases*, senão seguirá para o *default*. Uma diferença é que em GO existe o termo `fallthrough` que faz com que o próximo *case* também seja executado caso o *case* com *fallthrough* seja verdadeiro.
 
+**Detalhes:**
+- O switch statement (variável que vem logo após a palavra reservada *switch*) pode ou não ser informado nessa etapa. Porém senão for, terá que ser informado dentro dos *cases*.
+<br> **Exemplo 1:**
+  <pre><code>switch isso {
+    case "aquilo":
+      fmt.Println("isso é igual aquilo")
+    case "isto aqui":
+      fmt.Println("isso é igual a isto aqui")
+  }</code></pre>
+
+  <br> **Exemplo 2:**
+  <pre><code>switch {
+    case isso == "aquilo":
+      fmt.Println("isso é igual aquilo")
+    case isso == "isto aqui":
+      fmt.Println("isso é igual a isto aqui")
+  }</code></pre>
+
+- Não é necessário ter o ***break*** dentro dos ***cases*** para interrompê-los, como em outras linguagens.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
