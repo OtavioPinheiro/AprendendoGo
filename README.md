@@ -105,6 +105,16 @@ São números sequênciais atribuídos automáticamente pelo sistema.
 
 - Não é necessário ter o ***break*** dentro dos ***cases*** para interrompê-los, como em outras linguagens.
 
+### Dados compostos
+Dados compostos são qualquer tipo de dados que podem ser construídos em um programa utilizando dados primitivos da programação ou outro tipo de dados compostos.
+
+- ***Arrays:*** Arrays são vetores de número finito. Podem ser vetores de *strings*, *integers*, *floats*, etc. Arrays são dados compostos.
+- ***Slices:*** Slices são arrays (conjunto de dados) que podem ser compostos por *strings*, *integers*, *floats*, etc. Logo *slices* são um tipo de dados compostos. Slices, quando são declarados, são como um array de tamanho "infinito".
+<br>**Exemplo de declaração de um array e de um slice:**
+  <pre><code>array := [5]int{1, 2, 3, 4, 5}
+  slice := []int{1, 2, 3, 4, 5}
+  </code></pre>
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
