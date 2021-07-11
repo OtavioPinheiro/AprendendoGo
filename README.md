@@ -105,6 +105,33 @@ São números sequênciais atribuídos automáticamente pelo sistema.
 
 - Não é necessário ter o ***break*** dentro dos ***cases*** para interrompê-los, como em outras linguagens.
 
+### Função range
+Percorre todo o array ou slice até o final. Comumente usado no loop for.
+<br>**Exemplo 1:**
+<pre><code>slice := []int{20, 21, 22, 23}
+total := 0
+for _, valor := range slice {
+  total += valor
+}
+fmt.Println("O valor total é: ", total)
+
+<span style = "color: blue">-- Output: O valor total é: 86
+</span></code></pre>
+
+<br>**Exemplo 2:**
+<pre><code>slice := []string{"morango", "uva", "pêra", "maçã", "kiwi"}
+
+for índice, valor := range slice {
+  fmt.Println("No índice", índice, "temos o valor:", valor)
+}
+
+<span style = "color: blue">-- Output: No índice 0 temos o valor: morango
+No índice 1 temos o valor: uva
+No índice 2 temos o valor: pêra
+No índice 3 temos o valor: maçã
+No índice 4 temos o valor: kiwi
+</span></code></pre>
+
 ### Dados compostos
 Dados compostos são qualquer tipo de dados que podem ser construídos em um programa utilizando dados primitivos da programação ou outro tipo de dados compostos.
 
@@ -114,6 +141,12 @@ Dados compostos são qualquer tipo de dados que podem ser construídos em um pro
   <pre><code>array := [5]int{1, 2, 3, 4, 5}
   slice := []int{1, 2, 3, 4, 5}
   </code></pre>
+
+#### Manipulando Slices
+
+
+#### Slice slices (fatia de fatias)
+
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
