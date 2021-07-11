@@ -143,10 +143,31 @@ Dados compostos são qualquer tipo de dados que podem ser construídos em um pro
   </code></pre>
 
 #### Manipulando Slices
+- **Atribuição:** Podemos reatribuir um dado valor do slice simplesmente informando o índice entre colchetes e em seguida passando o novo valor.<br>**Exemplo:** `slice[3] = "banana"`
+- **Adicionando novos elementos:** Não é possível adicionar novos elementos ao slice sem usar a função append, pois o slice é criado com um **número fixo** de elementos.
+<br>**Exemplo:**
+  <pre><code>slice := []string{"morango", "uva", "pêra", "maçã", "kiwi"}
+  <span style = "color: red">//Maneira errada de se adicionar um novo elemento ao slice.</span>
+  slice[5] = "maracujá"
+  <span style = "color: green">//Maneira certa de se adicionar um novo elemento ao slice.</span>
+  slice = append(slice, "maracujá")
+  </pre></code>
 
+- **Excluindo elementos:** Para excluir elementos de um *slice* devemos usar a função append junto com a operação *slice*, nesse caso significa corte, ou seja, pegar uma parte do dado composto chamado *slice* (quase igual a um *array*) e unir com outra parte, porém deixando o elemento a ser excluído de fora.
+<br>**Exemplo:**
+  <pre><code>frutasFavoritas := []string{"morango", "uva", "melão", "kiwi", "maracujá"}
+  frutasFavoritasAtualizada := append(frutasFavoritas[:2], frutasFavoritas[3:]...)
+  </code></pre>
 
 #### Slice slices (fatia de fatias)
+Operação *slice* (cortar, fatiar) criar um sub-array de um array principal, ou seja, cria um outro conjunto de dados a partir de um já existente.
+<br>**Exemplo:**
+<pre><code>frutasFavoritas := []string{"morango", "limão", "laranja", "uva", "kiwi", "melão", "banana", "maçã", "pêra", "goiaba"}
+frutas_acidas := frutasFavoritas[:5]
+frutas_n_acidas := frutasFavoritas[5:]
+</code></pre>
 
+**Importante:** Na hora de realizar o corte no conjunto de dados sempre lembrar que o último índice não será incluído, ou seja, `[:5]` neste exemplo o corte será aplicado desde o início do conjunto de dados até o índice 5, porém o valor deste índice não será incluído no corte. E `[5:]` neste outro exemplo significa que o corte começará no índice 5, então o valor dele estará incluído no corte, e irá até o final do conjunto de dados.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
