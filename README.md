@@ -153,6 +153,8 @@ Dados compostos são qualquer tipo de dados que podem ser construídos em um pro
   slice = append(slice, "maracujá")
   </pre></code>
 
+  **Importante:** A função *append* adiciona novos elementos ao final do *slice* e recebe como argumentos um *slice* e pode receber um número infinito de elementos desde que sejam do mesmo tipo dos elementos presentes no *slice* ao qual deseja-se adicioná-los.
+
 - **Excluindo elementos:** Para excluir elementos de um *slice* devemos usar a função append junto com a operação *slice*, nesse caso significa corte, ou seja, pegar uma parte do dado composto chamado *slice* (quase igual a um *array*) e unir com outra parte, porém deixando o elemento a ser excluído de fora.
 <br>**Exemplo:**
   <pre><code>frutasFavoritas := []string{"morango", "uva", "melão", "kiwi", "maracujá"}
