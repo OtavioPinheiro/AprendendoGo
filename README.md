@@ -190,6 +190,37 @@ frutas_n_acidas := frutasFavoritas[5:]
 
 **Importante:** Na hora de realizar o corte no conjunto de dados sempre lembrar que o último índice não será incluído, ou seja, `[:5]` neste exemplo o corte será aplicado desde o início do conjunto de dados até o índice 5, porém o valor deste índice não será incluído no corte. E `[5:]` neste outro exemplo significa que o corte começará no índice 5, então o valor dele estará incluído no corte, e irá até o final do conjunto de dados, uma outra de maneira de se realizar a mesma tarefa seria usar a função *len()*, então teríamos `newSlice := slice[2:len(slice)]`.
 
+#### Função ***make([]T, len, cap)***.
+Cria um slice do tamanho e da capacidade informados como parâmetros. O tamanho (*length*) trata-se de quantos elementos o slice possui inicialmente e a capacidade (*capacity*) trata-se do tamanho máximo ou limite do slice. Caso seja atribuído mais elementos que a capacidade informada, um novo slice será criado com o dobro da capacity e os dados serão copiados para lá.
+
+```go
+package main
+
+import (
+  "fmt"
+)
+
+func main() {
+  slice := make([]int, 5, 10)
+  
+  slice[0], slice[1], slice[2], slice[3], slice[4] = 1, 2, 3, 4, 5
+
+  slice = append(slice, 6)
+  slice = append(slice, 7)
+  slice = append(slice, 8)
+  slice = append(slice, 9)
+  slice = append(slice, 10)
+
+  fmt.Println(slice, len(slice), cap(slice))
+
+  slice = append(slice, 11)
+
+  fmt.Println(slice, len(slice), cap(slice))
+}
+```
+
+**Importante:** Sempre que um slice mudar de tamanho (*length*), um novo array será criado e os dados serão copiados para ele.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
