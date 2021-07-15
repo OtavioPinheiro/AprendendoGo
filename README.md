@@ -30,7 +30,7 @@ O blank identifier serve para dizer ao programa ignorar um retorno de informaç�
 
 ### Variáveis
 Variáveis em GO podem ser declaradas das seguintes formas:
-```
+```go
   var i int -> Declaração da variável
   i = 42 -> Inicialização da variável
 
@@ -78,9 +78,12 @@ Já o *Raw String Literal* são strings cruas que não serão interpretadas.<br>
 ### Iota
 São números sequênciais atribuídos automáticamente pelo sistema.
 
-**Exemplos:** ```const (a = iota, b = iota, c = iota)```
+**Exemplos:**
+```go 
+const (a = iota, b = iota, c = iota)
+```
 
-**Resultado:** ```a = 0, b = 1, c = 2```
+**Resultado:** `a = 0, b = 1, c = 2`
 
 ### Switch e case
 É igual para todas as linguagens que utilizam *switch case*, ou seja, o *switch* irá comparar o valor da variável informada com o valor declarado nos *cases*, caso verdadeira, executará o código dentro dos respectivos *cases*, senão seguirá para o *default*. Uma diferença é que em GO existe o termo `fallthrough` que faz com que o próximo *case* também seja executado caso o *case* com *fallthrough* seja verdadeiro.
@@ -88,44 +91,51 @@ São números sequênciais atribuídos automáticamente pelo sistema.
 **Detalhes:**
 - O switch statement (variável que vem logo após a palavra reservada *switch*) pode ou não ser informado nessa etapa. Porém senão for, terá que ser informado dentro dos *cases*.
 <br> **Exemplo 1:**
-  <pre><code>switch isso {
+  ```go
+  switch isso {
     case "aquilo":
       fmt.Println("isso é igual aquilo")
     case "isto aqui":
       fmt.Println("isso é igual a isto aqui")
-  }</code></pre>
+  }
+  ```
 
   <br> **Exemplo 2:**
-  <pre><code>switch {
+  ```go
+  switch {
     case isso == "aquilo":
       fmt.Println("isso é igual aquilo")
     case isso == "isto aqui":
       fmt.Println("isso é igual a isto aqui")
-  }</code></pre>
+  }
+  ```
 
 - Não é necessário ter o ***break*** dentro dos ***cases*** para interrompê-los, como em outras linguagens.
 
 ### Função range
 Percorre todo o array ou slice até o final. Comumente usado no loop for.
-<br>**Exemplo 1:**
-<pre><code>slice := []int{20, 21, 22, 23}
+
+**Exemplo 1:**
+```go
+slice := []int{20, 21, 22, 23}
 total := 0
 for _, valor := range slice {
   total += valor
 }
 fmt.Println("O valor total é: ", total)
-
-<span style = "color: blue">-- Output: O valor total é: 86
+```
+<pre><code><span style = "color: blue">-- Output: O valor total é: 86
 </span></code></pre>
 
-<br>**Exemplo 2:**
-<pre><code>slice := []string{"morango", "uva", "pêra", "maçã", "kiwi"}
+**Exemplo 2:**
+```go
+slice := []string{"morango", "uva", "pêra", "maçã", "kiwi"}
 
 for índice, valor := range slice {
   fmt.Println("No índice", índice, "temos o valor:", valor)
 }
-
-<span style = "color: blue">-- Output: No índice 0 temos o valor: morango
+```
+<pre><code><span style = "color: blue">-- Output: No índice 0 temos o valor: morango
 No índice 1 temos o valor: uva
 No índice 2 temos o valor: pêra
 No índice 3 temos o valor: maçã
@@ -137,37 +147,46 @@ Dados compostos são qualquer tipo de dados que podem ser construídos em um pro
 
 - ***Arrays:*** Arrays são vetores de número finito. Podem ser vetores de *strings*, *integers*, *floats*, etc. Arrays são dados compostos.
 - ***Slices:*** Slices são arrays (conjunto de dados) que podem ser compostos por *strings*, *integers*, *floats*, etc. Logo *slices* são um tipo de dados compostos. Slices, quando são declarados, são como um array de tamanho "infinito".
-<br>**Exemplo de declaração de um array e de um slice:**
-  <pre><code>array := [5]int{1, 2, 3, 4, 5}
+
+**Exemplo de declaração de um array e de um slice:**
+  ```go
+  array := [5]int{1, 2, 3, 4, 5}
   slice := []int{1, 2, 3, 4, 5}
-  </code></pre>
+  ```
 
 #### Manipulando Slices
 - **Atribuição:** Podemos reatribuir um dado valor do slice simplesmente informando o índice entre colchetes e em seguida passando o novo valor.<br>**Exemplo:** `slice[3] = "banana"`
 - **Adicionando novos elementos:** Não é possível adicionar novos elementos ao slice sem usar a função append, pois o slice é criado com um **número fixo** de elementos.
-<br>**Exemplo:**
-  <pre><code>slice := []string{"morango", "uva", "pêra", "maçã", "kiwi"}
-  <span style = "color: red">//Maneira errada de se adicionar um novo elemento ao slice.</span>
+
+  **Exemplo:**
+  ```go
+  slice := []string{"morango", "uva", "pêra", "maçã", "kiwi"}
+  
+  //Maneira errada de se adicionar um novo elemento ao slice.</span>
   slice[5] = "maracujá"
-  <span style = "color: green">//Maneira certa de se adicionar um novo elemento ao slice.</span>
+  
+  //Maneira certa de se adicionar um novo elemento ao slice.</span>
   slice = append(slice, "maracujá")
-  </pre></code>
+  ```
 
   **Importante:** A função *append* adiciona novos elementos ao final do *slice* e recebe como argumentos um *slice* e pode receber um número infinito de elementos desde que sejam do mesmo tipo dos elementos presentes no *slice* ao qual deseja-se adicioná-los.
 
 - **Excluindo elementos:** Para excluir elementos de um *slice* devemos usar a função append junto com a operação *slice*, nesse caso significa corte, ou seja, pegar uma parte do dado composto chamado *slice* (quase igual a um *array*) e unir com outra parte, porém deixando o elemento a ser excluído de fora.
-<br>**Exemplo:**
-  <pre><code>frutasFavoritas := []string{"morango", "uva", "melão", "kiwi", "maracujá"}
+**Exemplo:**
+  ```go
+  frutasFavoritas := []string{"morango", "uva", "melão", "kiwi", "maracujá"}
   frutasFavoritasAtualizada := append(frutasFavoritas[:2], frutasFavoritas[3:]...)
-  </code></pre>
+  ```
 
 #### Slice slices (fatia de fatias)
 Operação *slice* (cortar, fatiar) criar um sub-array de um array principal, ou seja, cria um outro conjunto de dados a partir de um já existente.
-<br>**Exemplo:**
-<pre><code>frutasFavoritas := []string{"morango", "limão", "laranja", "uva", "kiwi", "melão", "banana", "maçã", "pêra", "goiaba"}
+
+**Exemplo:**
+```go
+frutasFavoritas := []string{"morango", "limão", "laranja", "uva", "kiwi", "melão", "banana", "maçã", "pêra", "goiaba"}
 frutas_acidas := frutasFavoritas[:5]
 frutas_n_acidas := frutasFavoritas[5:]
-</code></pre>
+```
 
 **Importante:** Na hora de realizar o corte no conjunto de dados sempre lembrar que o último índice não será incluído, ou seja, `[:5]` neste exemplo o corte será aplicado desde o início do conjunto de dados até o índice 5, porém o valor deste índice não será incluído no corte. E `[5:]` neste outro exemplo significa que o corte começará no índice 5, então o valor dele estará incluído no corte, e irá até o final do conjunto de dados, uma outra de maneira de se realizar a mesma tarefa seria usar a função *len()*, então teríamos `newSlice := slice[2:len(slice)]`.
 
