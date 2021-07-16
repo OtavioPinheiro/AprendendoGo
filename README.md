@@ -9,9 +9,7 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 ## O que é Go Lang?
 A linguagem Go é uma linguagem de programação criada pela Google e lançada em códgio livre em 2009. É uma linguagem compilada e focada em produtividade e programação concorrente, baseada em trabalhos feitos no sistema operacional chamado Inferno.
 
-## Começando o estudo.
-
-### Regras  e características da linguagem
+## Regras  e características da linguagem
 1. Não é permitido declarar uma variável e não utilizá-la. Isso gerará um erro, pois fere um dos princípios da linguagem que é possuir um código limpo.
 2. Go é uma lingaugem de tipagem estática.
 3. Quando uma variável é declarada fora de um codeblock scope e não é atribuída a um valor neste momento, ela só poderá receber um valor dentro de um codeblock.
@@ -20,15 +18,15 @@ A linguagem Go é uma linguagem de programação criada pela Google e lançada e
 6. Em Go strings são imutáveis. Para alterar uma string é necessário criar outra string com a alteração desejada.
 7. Não existe ***While*** em GO.
 
-### Operador curto de declaração
+## Operador curto de declaração
 É representado por `:=`. É utilizado na declaração de variáveis. O diferencial é que esse operador possui tipagem automática, ou seja, não é necessário informar o tipo da variável quando utilizamos o operador curto de declaração e só podemos utilizar esse operador dentro de um *codeblocks* (escopo).
 
 Esse operador é diferente do operador de atribuição `=`. Cuidado para não confundí-lo, pois são utilizados em contextos diferentes.
 
-### Blank identifier
+## Blank identifier
 O blank identifier serve para dizer ao programa ignorar um retorno de informações recebido por uma função. É representado pelo caractere `_`.
 
-### Variáveis
+## Variáveis
 Variáveis em GO podem ser declaradas das seguintes formas:
 ```go
   var i int -> Declaração da variável
@@ -39,7 +37,7 @@ Variáveis em GO podem ser declaradas das seguintes formas:
   k := 99
 ```
 
-### Valor zero
+## Valor zero
 Sempre que criarmos uma variável e não inicializarmos ela, por padrão ela virá com *"valor zero"*
 Valores zeros nos diferentes tipos de variáveis:
 - ints: 0;
@@ -52,19 +50,19 @@ Valores zeros nos diferentes tipos de variáveis:
 - Use `:=` sempre que possível;
 - Use var para package level scope.
 
-### Raw string literal e Interpreted string literal
+## Raw string literal e Interpreted string literal
 *Interpreted String Literal* são strings interpretadas.<br>**Exemplo:** `fmt.Printf("Olá!\nTudo bem?\tEspero que sim.")`
 
 Já o *Raw String Literal* são strings cruas que não serão interpretadas.<br>**Exemplo:** ```fmt.Printf(`Olá!\nTudo bem?\tEspero que sim.`)```
 
 **Atenção**: Para Raw Strings utiliza-se o acento grave ``.
 
-### Tipo string (cadeia de caracteres)
+## Tipo string (cadeia de caracteres)
 - Strings são sequências de bytes.
 - são imutáveis
 - Uma string é uma fatia de bytes (*slice of bytes*)
 
-### Pacote fmt
+## Pacote fmt
 - **fmt.Print():** Exibe na tela a string passada como argumento.
 - **fmt.Printf():** Exibe na tela a string passada como argumento. Permite formatações.
 - **fmt.Println():** Exibe na tela a string passada como argumento. Insere uma quebra de linha (\n) ao final da string.
@@ -75,7 +73,7 @@ Já o *Raw String Literal* são strings cruas que não serão interpretadas.<br>
 - **fmt.Fprintf():** Escreve a string, passada como argumento, em um arquivo. Permite formatações.
 - **fmt.Fprintln():** Escreve a string, passada como argumento, em um arquivo. Insere uma quebra de linha (`\n`) ao final da string.
 
-### Iota
+## Iota
 São números sequênciais atribuídos automáticamente pelo sistema.
 
 **Exemplos:**
@@ -85,12 +83,13 @@ const (a = iota, b = iota, c = iota)
 
 **Resultado:** `a = 0, b = 1, c = 2`
 
-### Switch e case
+## Switch e case
 É igual para todas as linguagens que utilizam *switch case*, ou seja, o *switch* irá comparar o valor da variável informada com o valor declarado nos *cases*, caso verdadeira, executará o código dentro dos respectivos *cases*, senão seguirá para o *default*. Uma diferença é que em GO existe o termo `fallthrough` que faz com que o próximo *case* também seja executado caso o *case* com *fallthrough* seja verdadeiro.
 
 **Detalhes:**
 - O switch statement (variável que vem logo após a palavra reservada *switch*) pode ou não ser informado nessa etapa. Porém senão for, terá que ser informado dentro dos *cases*.
-<br> **Exemplo 1:**
+
+  **Exemplo 1:**
   ```go
   switch isso {
     case "aquilo":
@@ -100,7 +99,7 @@ const (a = iota, b = iota, c = iota)
   }
   ```
 
-  <br> **Exemplo 2:**
+  **Exemplo 2:**
   ```go
   switch {
     case isso == "aquilo":
@@ -112,7 +111,7 @@ const (a = iota, b = iota, c = iota)
 
 - Não é necessário ter o ***break*** dentro dos ***cases*** para interrompê-los, como em outras linguagens.
 
-### Função range
+## Função range
 Percorre todo o array ou slice até o final. Comumente usado no loop for.
 
 **Exemplo 1:**
@@ -142,11 +141,11 @@ No índice 3 temos o valor: maçã
 No índice 4 temos o valor: kiwi
 </span></code></pre>
 
-### Dados compostos
+## Dados compostos
 Dados compostos são qualquer tipo de dados que podem ser construídos em um programa utilizando dados primitivos da programação ou outro tipo de dados compostos.
 
 - ***Arrays:*** Arrays são vetores de número finito. Podem ser vetores de *strings*, *integers*, *floats*, etc. Arrays são dados compostos.
-- ***Slices:*** Slices são arrays (conjunto de dados) que podem ser compostos por *strings*, *integers*, *floats*, etc. Logo *slices* são um tipo de dados compostos. Slices, quando são declarados, são como um array de tamanho "infinito".
+- ***Slices:*** Slices são ponteiros de arrays (conjunto de dados) que podem ser compostos por *strings*, *integers*, *floats*, etc. Logo *slices* são um tipo de dados compostos. Slices, quando são declarados, são como um array de tamanho "infinito".
 
 **Exemplo de declaração de um array e de um slice:**
   ```go
@@ -154,7 +153,7 @@ Dados compostos são qualquer tipo de dados que podem ser construídos em um pro
   slice := []int{1, 2, 3, 4, 5}
   ```
 
-#### Manipulando Slices
+## Manipulando Slices
 - **Atribuição:** Podemos reatribuir um dado valor do slice simplesmente informando o índice entre colchetes e em seguida passando o novo valor.<br>**Exemplo:** `slice[3] = "banana"`
 - **Adicionando novos elementos:** Não é possível adicionar novos elementos ao slice sem usar a função append, pois o slice é criado com um **número fixo** de elementos.
 
@@ -178,7 +177,7 @@ Dados compostos são qualquer tipo de dados que podem ser construídos em um pro
   frutasFavoritasAtualizada := append(frutasFavoritas[:2], frutasFavoritas[3:]...)
   ```
 
-#### Slice slices (fatia de fatias)
+### Slice slices (fatia de fatias)
 Operação *slice* (cortar, fatiar) criar um sub-array de um array principal, ou seja, cria um outro conjunto de dados a partir de um já existente.
 
 **Exemplo:**
@@ -190,7 +189,7 @@ frutas_n_acidas := frutasFavoritas[5:]
 
 **Importante:** Na hora de realizar o corte no conjunto de dados sempre lembrar que o último índice não será incluído, ou seja, `[:5]` neste exemplo o corte será aplicado desde o início do conjunto de dados até o índice 5, porém o valor deste índice não será incluído no corte. E `[5:]` neste outro exemplo significa que o corte começará no índice 5, então o valor dele estará incluído no corte, e irá até o final do conjunto de dados, uma outra de maneira de se realizar a mesma tarefa seria usar a função *len()*, então teríamos `newSlice := slice[2:len(slice)]`.
 
-#### Função ***make([]T, len, cap)***.
+### Função ***make([]T, len, cap)***.
 Cria um slice do tamanho e da capacidade informados como parâmetros. O tamanho (*length*) trata-se de quantos elementos o slice possui inicialmente e a capacidade (*capacity*) trata-se do tamanho máximo ou limite do slice. Caso seja atribuído mais elementos que a capacidade informada, um novo slice será criado com o dobro da capacity e os dados serão copiados para lá.
 
 ```go
@@ -220,6 +219,26 @@ func main() {
 ```
 
 **Importante:** Sempre que um slice mudar de tamanho (*length*), um novo array será criado e os dados serão copiados para ele.
+
+## Slice Multidimensional
+*Slices Multidimensionais* são como matrizes em Linguagem C.
+- **Exemplo:**
+  ```go
+  package main
+
+  import (
+    "fmt"
+  )
+
+  func main() {
+    ss := [][]int {
+      []int {1, 2, 3},
+      []int {4, 5, 6},
+      []int {7, 8, 9},
+    }
+    fmt.Println(ss)
+  }
+  ```
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
