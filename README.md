@@ -210,7 +210,7 @@ frutas_n_acidas := frutasFavoritas[5:]
 [1 2 5]
 [1 2 <span style = "color: red">5</span> 4 5]</code></pre>
 
-
+**Dica:** Se for precisar criar um *slice* a partir de outro *slice* e não quer que os dados do *slice* original se percam, utilize um laço *for* para realizar essa tarefa e copie elemento a elemento do *slice* antigo para o novo.
 
 ### Função ***make([]T, len, cap)***.
 Cria um slice do tamanho e da capacidade informados como parâmetros. O tamanho (*length*) trata-se de quantos elementos o slice possui inicialmente e a capacidade (*capacity*) trata-se do tamanho máximo ou limite do slice. Caso seja atribuído mais elementos que a capacidade informada, um novo slice será criado com o dobro da capacity e os dados serão copiados para lá.
