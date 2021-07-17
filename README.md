@@ -206,9 +206,9 @@ frutas_n_acidas := frutasFavoritas[5:]
   }
 ```
   **Resultado:**
-  <pre><code>[1 2 <span style = "color:blue">3</span> 4 5]
+  <pre><code>[1 2 <span style = "color:blue"><b>3</b></span> 4 5]
 [1 2 5]
-[1 2 <span style = "color: red">5</span> 4 5]</code></pre>
+[1 2 <span style = "color: red"><b>5</b></span> 4 5]</code></pre>
 
 **Dica:** Se for precisar criar um *slice* a partir de outro *slice* e não quer que os dados do *slice* original se percam, utilize um laço *for* para realizar essa tarefa e copie elemento a elemento do *slice* antigo para o novo. Ou então utilize a mesma variável para realizar o corte e criar um slice subjacente.
 
