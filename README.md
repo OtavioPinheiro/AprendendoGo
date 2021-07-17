@@ -189,6 +189,29 @@ frutas_n_acidas := frutasFavoritas[5:]
 
 **Importante:** Na hora de realizar o corte no conjunto de dados sempre lembrar que o **último índice não será incluído**, ou seja, `[:5]` neste exemplo o corte será aplicado desde o início do conjunto de dados até o índice 5, porém o valor deste índice não será incluído no corte. E `[5:]` neste outro exemplo significa que o corte começará no índice 5, então o valor dele estará incluído no corte, e irá até o final do conjunto de dados, uma outra de maneira de se realizar a mesma tarefa seria usar a função *len()*, então teríamos `newSlice := slice[2:len(slice)]`.
 
+**Importantíssimo:** **CUIDADO** ao usar *slices*, pois quando se realiza um corte de um slice pré-existente para criar um novo, o *slice* antigo ficará com os valores originais alterados devido ao corte realizado.
+
+**Exemplo:**
+```go
+  package main
+  import (
+  	"fmt"
+  )
+  func main() {
+  	primeiroslice := []int{1, 2, 3, 4, 5}
+  	fmt.Println(primeiroslice)
+  	segundoslice := append(primeiroslice[:2], primeiroslice[4:]...)
+  	fmt.Println(segundoslice)
+  	fmt.Println(primeiroslice)
+  }
+```
+  **Resultado:**
+  <pre><code>[1 2 <span style = "color:blue">3</span> 4 5]
+[1 2 5]
+[1 2 <span style = "color: red">5</span> 4 5]</code></pre>
+
+
+
 ### Função ***make([]T, len, cap)***.
 Cria um slice do tamanho e da capacidade informados como parâmetros. O tamanho (*length*) trata-se de quantos elementos o slice possui inicialmente e a capacidade (*capacity*) trata-se do tamanho máximo ou limite do slice. Caso seja atribuído mais elementos que a capacidade informada, um novo slice será criado com o dobro da capacity e os dados serão copiados para lá.
 
