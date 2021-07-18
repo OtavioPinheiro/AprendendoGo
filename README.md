@@ -300,6 +300,32 @@ São uma estrutura de dados baseados em chave-valor, assim como são os dicioná
   ```
 - Adicionando elementos: `map[chave] = valor`
 
+## Maps - range e delete.
+- A função ***range*** em *Maps* irá percorrer todas as *keys* e *values* presentes no *Maps*. Lembrando que sempre o primeiro valor será a chave (*key*) e o segundo valor será o valor (*value*).
+
+- A função ***delete***, como o nome sugere, irá deletar um item presente no *Map*, lembrando que caso não haja nenhum item com a chave especificada, a função **não irá retornar um erro ou uma exception!** Para esta função devem ser passados o *map* que se dejeta remover o item e a chave desse item.
+
+**Exemplo:**
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    qualquercoisa := map[int]string {
+        10: "dez",
+        100: "cem",
+        300: "trezentos"
+        1000: "mil"
+    }
+    fmt.Println(qualquercoisa)
+    delete(qualquercoisa, 300)
+    fmt.Println(qualquercoisa)
+}
+```
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
