@@ -326,6 +326,36 @@ func main() {
 }
 ```
 
+# Structs
+*Structs* são estruturas de dados, cuja os dados podem ser difrentes.
+- Declaração:
+  ```go
+  package main
+
+  import (
+    "fmt"
+  )
+
+  type cliente struct {
+    nome string
+    sobrenome string
+    fumante bool
+  }
+
+  func main() {
+    cliente1 := cliente{
+      nome: "João",
+      sobrenome: "da Silva",
+      fumante: false,
+    }
+
+    cliente2 := {"Joana", "Pereira", true}
+    
+    fmt.Println(cliente1)
+    fmt.Println(cliente2)
+  }
+  ```
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
