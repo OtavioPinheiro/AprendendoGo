@@ -349,12 +349,66 @@ func main() {
       fumante: false,
     }
 
-    cliente2 := {"Joana", "Pereira", true}
+    cliente2 := cliente{"Joana", "Pereira", true}
     
     fmt.Println(cliente1)
     fmt.Println(cliente2)
   }
   ```
+
+## Struct embutido
+*Structs* embutidos nada mais são do que um *Struct* dentro de outro.
+- **Exemplo:**
+  ```go
+  package main
+
+  import (
+    "fmt"
+  )
+
+  type pessoa struct {
+    nome string
+    idade int
+  }
+
+  type profissional struct {
+    pessoa
+    titulo string
+    salario int
+  }
+
+  func main() {
+    pessoa1 := pessoa{
+      nome: "Alfredo",
+      idade: 30,
+    }
+
+    pessoa2 := profissional{
+      pessoa: pessoa{
+        nome: "Maria",
+        idade: 22,
+      }
+      titulo: "Pizzaiola",
+      salario: 10000,
+    }
+
+    pessoa3 := profissional{ pessoa: pessoa{ "José", 40 }, "Político", 100000 }
+    
+    fmt.Println(pessoa1)
+    fmt.Println(pessoa2)
+  }
+  ```
+
+### 
+
+## Acessar Valores
+Para acessar valores específicos da *struct*, usamos a notação de ponto, como em linguagens orientadas a objeto. Caso seja *structs* embutidos é só passar o nome da *struct* embutida (interna) e depois o nome do campo. E se o nome do campo da *struct* embutida seja diferente de todos os nomes do campo da *struct* principal, então o campo da *struct* interna é promovida para campo da *struct* principal.
+
+**Exemplos:**
+1. `fmt.Println(cliente1.sobrenome)`
+2. `fmt.Println(pessoa2.titulo)`
+3. `fmt.Println(pessoa2.pessoa.nome)`
+4. `fmt.Println(pessoa2.nome)`
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
