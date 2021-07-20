@@ -410,6 +410,28 @@ Para acessar valores específicos da *struct*, usamos a notação de ponto, como
 3. `fmt.Println(pessoa2.pessoa.nome)`
 4. `fmt.Println(pessoa2.nome)`
 
+## Struct anônimo
+Não se declara o tipo do *struct* anônimo, apenas declara-se o valor. Esse tipo de *struct* não é reutilizável.
+- **Exemplo:**
+  ```go
+  
+  package main
+
+  import (
+    "fmt"
+  )
+
+  func main() {
+    x := struct { 
+      nome string
+      idade int
+    }{
+      nome: "Mário",
+      idade: 50
+    }
+  }
+  ```
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
