@@ -317,8 +317,8 @@ func main() {
     qualquercoisa := map[int]string {
         10: "dez",
         100: "cem",
-        300: "trezentos"
-        1000: "mil"
+        300: "trezentos",
+        1000: "mil",
     }
     fmt.Println(qualquercoisa)
     delete(qualquercoisa, 300)
