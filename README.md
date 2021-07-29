@@ -437,6 +437,91 @@ Uma função é um grupo de instruções que juntas executam uma tarefa. Cada pr
 
 A linguagem Go por padrão possui várias funções pré-prontas para serem utilizadas. As funções, em Go, também são conhecidas como método, sub-rotina ou procedimento.
 
+**IMPORTANTE:** Em Go, os argumentos, que são passados para a função, são do tipo ***pass by value***, ou seja, o argumento não irá receber a variável em si, mas sim o valor que a variável possui, diferente do que acontece com as funções utilizadas na linguagem ***Python***, por exemplo. Há apenas um caso em Go que será ***pass by reference***.
+
+**Exemplos:**
+- Funções que não recebem argumentos:
+  ```go
+    package main
+    
+    import (
+      "fmt"
+    )
+
+    func main() {
+      basica()
+    }
+
+    func basica() {
+      fmt.Println("Oi, bom dia!")
+    }
+  ```
+
+- Funções que recebem argumentos:
+  ```go
+    package main
+    
+    import (
+      "fmt"
+    )
+
+    func main() {
+      argumento("tarde")
+    }
+
+    func argumento(s string) {
+      if s == "manhã" {
+        fmt.Println("Oi, bom dia!")
+      } else if s == "tarde" {
+        fmt.Println("Oi, boa tarde!")
+      } else {
+        fmt.Println("Oi, bom noite!")
+      }
+    }
+  ```
+
+- Funções que retornam valores:
+  ```go
+    package main
+    
+    import (
+      "fmt"
+    )
+
+    func main() {
+      valor := soma(10, 10)
+      fmt.Println(valor)
+    }
+
+    func soma(x, y int) int {
+      return x + y
+    }
+  ```
+
+- Funções com múltiplos retornos e parâmetros variádicos:
+  ```go
+    package main
+    
+    import (
+      "fmt"
+    )
+
+    func main() {
+      total, quantos := soma(10, 10)
+      fmt.Println(total, quantos)
+    }
+
+    func soma(x ...int) (int, int) {
+      soma := 0
+      for _, v := range x {
+        soma += v
+      }
+      return soma, len(x)
+    }
+  ```
+
+**IMPORTANTE:** Quando for utilizar um parâmetro variádico em um argumento de função, ele deve ser o último a ser passado.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
