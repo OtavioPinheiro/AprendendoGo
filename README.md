@@ -432,9 +432,15 @@ Não se declara o tipo do *struct* anônimo, apenas declara-se o valor. Esse tip
   }
   ```
 
+# Funções
+Uma função é um grupo de instruções que juntas executam uma tarefa. Cada programa em Go tem pelo menos uma função, que é a ***main()***. Normalmente cada função deve executar uma tarefa específica e é usada para dividir o código e reaproveitar algumas partes dele, evitando repetições. Uma declaração de uma função informa ao compilador sobre o nome da função, tipo de retorno e os parâmetros que a função deve receber. Uma definição de uma função está associada aos valores que os argumentos (parâmetros) irão receber quando a função é chamada.
+
+A linguagem Go por padrão possui várias funções pré-prontas para serem utilizadas. As funções, em Go, também são conhecidas como método, sub-rotina ou procedimento.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
 - fatih. **color**. Disponível em: https://github.com/fatih/color
 - GO. **The Go Programming Language Specification**. Disponível em: https://golang.org/ref/spec
 - GO. **Effective Go**. Disponível em: https://golang.org/doc/effective_go
+- Tutorials Point. **Tutorial GO**. Disponível em: https://](https://www.tutorialspoint.com/go/go_functions.htm)
