@@ -548,6 +548,42 @@ Não é possível passar um slice para uma função, mesmo que esta seja variád
   }
 ```
 
+# Defer
+*Defer*, do inglês, significa adiar. Na linguagem de programação Go, *Defer* é um *statement* (instrução) que é colocada antes de uma outra instrução, fazendo com que esta seja executada por último. Se houverem mais de um *Defer*, então o primeiro *Defer* que o compilador encontrar será o último a ser executado, como se fosse um FILO (First In, Last Out).
+
+*Defer* é frequentemente usado em programas que manipulam arquivos. Então, quando abrimos arquivos em Go, usamos o *Defer*, junto com a função para fechar o arquivo, logo em seguida, deste modo, não esquecemos de fechar o arquivo e evitamos problemas de consumo de memória.
+
+**IMPORTANTE:** Quando há um *return* e um *defer* juntos em uma parte do código, o *defer* será executado primeiro e depois o *return*.
+
+**Exemplos:**
+```go
+  package main
+
+  import (
+    "fmt"
+  )
+
+  func main() {
+    defer fmt.Println("Os últimos...")
+    fmt.Println("Serão os primeiros")
+  }
+```
+
+```go
+  package main
+
+  import (
+    "fmt"
+  )
+
+  func main() {
+    defer fmt.Println("der Anfang")
+    defer fmt.Println("das Ende ist")
+    defer fmt.Println("das Ende und")
+    defer fmt.Println("Der Anfang ist")
+  }
+```
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
