@@ -522,6 +522,9 @@ A linguagem Go por padrão possui várias funções pré-prontas para serem util
 
 **IMPORTANTE:** Quando for utilizar um parâmetro variádico em um argumento de função, ele deve ser o último a ser passado.
 
+## Enumerando um slice como argumento para uma função
+Não é possível passar um slice para uma função, mesmo que esta seja variádica. Pois a função espera um único argumento por vez e não um slice. Logo para ressolver esse problema é necessário usar o enumerador de slice (operador ...), assim a função irá receber um único argumento por vez.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
