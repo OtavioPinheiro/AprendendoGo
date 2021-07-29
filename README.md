@@ -520,10 +520,33 @@ A linguagem Go por padrão possui várias funções pré-prontas para serem util
     }
   ```
 
-**IMPORTANTE:** Quando for utilizar um parâmetro variádico em um argumento de função, ele deve ser o último a ser passado.
+**IMPORTANTE:** Quando for utilizar um parâmetro variádico em um argumento de função, ele deve ser o último a ser passado. Essa função variádica pode receber nenhum valor como argumento.
 
 ## Enumerando um slice como argumento para uma função
 Não é possível passar um slice para uma função, mesmo que esta seja variádica. Pois a função espera um único argumento por vez e não um slice. Logo para ressolver esse problema é necessário usar o enumerador de slice (operador ...), assim a função irá receber um único argumento por vez.
+
+**Exemplo:**
+```go
+  package main
+
+  import (
+    "fmt"
+  )
+
+  func main() {
+    si := []int{1, 2, 3, 4, 5}
+    total := soma(si...)
+    fmt.Println(total)
+  }
+
+  func soma(x ...int) int {
+    total := 0
+    for _, v := range x {
+      total += v
+    }
+    return total
+  }
+```
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
