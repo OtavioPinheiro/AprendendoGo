@@ -414,7 +414,6 @@ Para acessar valores específicos da *struct*, usamos a notação de ponto, como
 Não se declara o tipo do *struct* anônimo, apenas declara-se o valor. Esse tipo de *struct* não é reutilizável.
 - **Exemplo:**
   ```go
-  
   package main
 
   import (
