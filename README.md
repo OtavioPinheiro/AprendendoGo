@@ -614,7 +614,8 @@ func main() {
 
 **Polimorfismo** em Go significa utilizar uma mesma função para mais de um tipo (`type`) se os mesmos fizerem parte da mesma interface.
 
-[**Código de exemplo**](./cap12_interface_polimorfismo.go)
+- [**Código de exemplo 1**](./cap12_interface_polimorfismo.go)
+- [**Código de exemplo 2**](./cap12_interface_polimorfismo_2.go)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
