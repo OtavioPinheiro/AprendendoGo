@@ -609,6 +609,13 @@ func main() {
 }
 ```
 
+# Interface e polimorfismo
+**Interfaces** são um conjunto de métodos. Se um tipo (`type`, entenda *type* como um objeto) tiver os mesmos métodos que uma interface, a linguagem Go, automaticamente, atribuirá o tipo da interface. Fazendo um paralelo com outras linguagens, como *Java*, é como se utilizássemos o `implements` para implementar uma interface, porém em Go não é necessário realizar essa tarefa, pois ela será realizada automaticamente.
+
+**Polimorfismo** em Go significa utilizar uma mesma função para mais de um tipo (`type`) se os mesmos fizerem parte da mesma interface.
+
+[**Código de exemplo**](./cap12_interface_polimorfismo.go)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
