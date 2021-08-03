@@ -583,6 +583,32 @@ Não é possível passar um slice para uma função, mesmo que esta seja variád
   }
 ```
 
+# Métodos
+Em Linguagem Go, um método é uma função anexada a um tipo, ou seja, é uma função que traz uma funcionalidade para um tipo específico.
+
+**Exemplo:**
+```go
+package main
+
+import (
+  "fmt"
+)
+
+type pessoa struct {
+  nome string
+  idade int
+}
+
+func (p pessoa) oibomdia() {
+  fmt.Println(p.nome, "diz bom dia!")
+}
+
+func main() {
+  jose := pessoa{"José", 30}
+  jose.oibomdia()
+}
+```
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
