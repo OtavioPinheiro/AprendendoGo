@@ -589,7 +589,32 @@ func main() {
 }
 ```
 
+## Retornando uma função
+Uma função pode retornar uma outra função. Essa prática é muito comum e muito utilizada na linguagem Go.
 
+**Exemplo:**
+
+```go
+package main
+
+import(
+  "fmt"
+)
+
+func main() {
+  x := retornaumafuncao()
+  z := x(3)
+  y := retornaumafuncao()(3) //segunda maneira de se chamar uma função e passar um parâmetro a ela.
+  fmt.Println(z)
+  fmt.Println(y)
+}
+
+func retornaumafuncao() func(int) int {
+  return func(i int) int {
+    return i * 10
+  }
+}
+```
 
 # Defer
 *Defer*, do inglês, significa adiar. Na linguagem de programação Go, *Defer* é um *statement* (instrução) que é colocada antes de uma outra instrução, fazendo com que esta seja executada por último. Se houverem mais de um *Defer*, então o primeiro *Defer* que o compilador encontrar será o último a ser executado, como se fosse um FILO (First In, Last Out).
