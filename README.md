@@ -547,6 +547,26 @@ Não é possível passar um slice para uma função, mesmo que esta seja variád
   }
 ```
 
+## Função anônima
+Função anônima é aquela que não possui nome e podemos chamá-la imediatamente após a sua declaração. Veja o exemplo:
+
+```go
+package main
+
+import (
+  "fmt"
+)
+
+func main() {
+  x := 387
+
+  func(x int) {
+    fmt.Println(x, "vezes 10 é:")
+    fmt.Println(x * 10)
+  }(x)
+}
+```
+
 # Defer
 *Defer*, do inglês, significa adiar. Na linguagem de programação Go, *Defer* é um *statement* (instrução) que é colocada antes de uma outra instrução, fazendo com que esta seja executada por último. Se houverem mais de um *Defer*, então o primeiro *Defer* que o compilador encontrar será o último a ser executado, como se fosse um FILO (First In, Last Out).
 
