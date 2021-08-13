@@ -616,6 +616,9 @@ func retornaumafuncao() func(int) int {
 }
 ```
 
+## Função Callback
+Função Callback é quando passamos uma função como argumento de outra função.
+
 # Defer
 *Defer*, do inglês, significa adiar. Na linguagem de programação Go, *Defer* é um *statement* (instrução) que é colocada antes de uma outra instrução, fazendo com que esta seja executada por último. Se houverem mais de um *Defer*, então o primeiro *Defer* que o compilador encontrar será o último a ser executado, como se fosse um FILO (First In, Last Out).
 
