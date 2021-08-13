@@ -626,6 +626,8 @@ Closure é cercar ou capturar um escopo (*scope*) para que possamos utilizá-lo 
 ## Recursividade
 Funções recursivas são aquelas funções que chamam a si própria. Os exemplos mais comuns de recursividade são fatoriais, matrioskas, efeito droste e fractais.
 
+[Código de exemplo](./cap12_aulaRecursividade.go)
+
 # Defer
 *Defer*, do inglês, significa adiar. Na linguagem de programação Go, *Defer* é um *statement* (instrução) que é colocada antes de uma outra instrução, fazendo com que esta seja executada por último. Se houverem mais de um *Defer*, então o primeiro *Defer* que o compilador encontrar será o último a ser executado, como se fosse um FILO (First In, Last Out).
 
