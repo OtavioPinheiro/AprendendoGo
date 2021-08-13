@@ -691,7 +691,7 @@ func main() {
 - [**Código de exemplo 2**](./cap12_interface_polimorfismo_2.go)
 
 # Closure
-
+Closure é cercar ou capturar um escopo (*scope*) para que possamos utilizá-lo em outro contexto. Closures nos permite salvar dados entre cahmadas de funções e ao mesmo tempo isolar estes dados do resto do código.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
