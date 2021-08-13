@@ -620,6 +620,9 @@ func retornaumafuncao() func(int) int {
 Função Callback é quando passamos uma função como argumento de outra função.
 [Códgio de exemplo](./cap12_aulaCallback.go)
 
+## Closure
+Closure é cercar ou capturar um escopo (*scope*) para que possamos utilizá-lo em outro contexto. Closures nos permite salvar dados entre cahmadas de funções e ao mesmo tempo isolar estes dados do resto do código.
+
 # Defer
 *Defer*, do inglês, significa adiar. Na linguagem de programação Go, *Defer* é um *statement* (instrução) que é colocada antes de uma outra instrução, fazendo com que esta seja executada por último. Se houverem mais de um *Defer*, então o primeiro *Defer* que o compilador encontrar será o último a ser executado, como se fosse um FILO (First In, Last Out).
 
@@ -689,9 +692,6 @@ func main() {
 
 - [**Código de exemplo 1**](./cap12_interface_polimorfismo.go)
 - [**Código de exemplo 2**](./cap12_interface_polimorfismo_2.go)
-
-# Closure
-Closure é cercar ou capturar um escopo (*scope*) para que possamos utilizá-lo em outro contexto. Closures nos permite salvar dados entre cahmadas de funções e ao mesmo tempo isolar estes dados do resto do código.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
