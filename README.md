@@ -3,13 +3,13 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 
 # Tópicos
 - [O que é GO Lang?](#o-que-é-go-lang)
-- [Começando o estudo](#começando-o-estudo)
+- [Regras e características da linguagem](#regras-e-caractersticas-da-linguagem)
 - [Constantes](#constantes)
   
 # O que é Go Lang?
 A linguagem Go é uma linguagem de programação criada pela Google e lançada em códgio livre em 2009. É uma linguagem compilada e focada em produtividade e programação concorrente, baseada em trabalhos feitos no sistema operacional chamado Inferno.
 
-# Regras  e características da linguagem
+# Regras e características da linguagem
 1. Não é permitido declarar uma variável e não utilizá-la. Isso gerará um erro, pois fere um dos princípios da linguagem que é possuir um código limpo.
 2. Go é uma lingaugem de tipagem estática.
 3. Quando uma variável é declarada fora de um codeblock scope e não é atribuída a um valor neste momento, ela só poderá receber um valor dentro de um codeblock.
