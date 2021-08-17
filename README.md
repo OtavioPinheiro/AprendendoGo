@@ -14,7 +14,14 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [Switch case](#switch-e-case)
 - [Função Range](#funo-range)
 - [Dados compostos](#dados-compostos)
-- [Constantes](#constantes)
+- [Manipulando Slices](#manipulando-slices)
+- [Função make()](#funo-maket-len-cap)
+- [Slice multidimensional](#slice-multidimensional)
+- [Funções](#funes)
+- [Defer](#defer)
+- [Métodos](#mtodos)
+- [Interface e polimorfismo](#interface-e-polimorfismo)
+- [Referências](#referncias)
   
 # O que é Go Lang?
 A linguagem Go é uma linguagem de programação criada pela Google e lançada em códgio livre em 2009. É uma linguagem compilada e focada em produtividade e programação concorrente, baseada em trabalhos feitos no sistema operacional chamado Inferno.
