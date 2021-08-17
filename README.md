@@ -4,6 +4,16 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 # Tópicos
 - [O que é GO Lang?](#o-que-é-go-lang)
 - [Regras e características da linguagem](#regras-e-caractersticas-da-linguagem)
+- [Operador curto de declaração](#operador-curto-de-declarao)
+- [Blank Identifier](#blank-identifier)
+- [Variáveis](#variveis)
+- [String literal](#raw-string-literal-e-interpreted-string-literal)
+- [Tipo String](#tipo-string-cadeia-de-caracteres)
+- [Pacote fmt](#pacote-fmt)
+- [Iota](#iota)
+- [Switch case](#switch-e-case)
+- [Função Range](#funo-range)
+- [Dados compostos](#dados-compostos)
 - [Constantes](#constantes)
   
 # O que é Go Lang?
