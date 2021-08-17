@@ -715,6 +715,9 @@ func main() {
 - [**Código de exemplo 1**](./cap12_interface_polimorfismo.go)
 - [**Código de exemplo 2**](./cap12_interface_polimorfismo_2.go)
 
+# Ponteiros
+Ponteiros, em linguagem de programação, é um objeto cujo valor aponta (ou refere-se) para outro valor armazenado em algum lugar da memória do computador que usa esse endereço de memória. Para obter o valor salvo nessa localização da memória, usa-se um processo chamado *dereferencing*.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
