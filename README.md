@@ -12,16 +12,16 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [Pacote fmt](#pacote-fmt)
 - [Iota](#iota)
 - [Switch case](#switch-e-case)
-- [Função Range](#funo-range)
+- [Função Range](#função-range)
 - [Dados compostos](#dados-compostos)
 - [Manipulando Slices](#manipulando-slices)
-- [Função make()](#funo-maket-len-cap)
+- [Função make()](#função-maket-len-cap)
 - [Slice multidimensional](#slice-multidimensional)
-- [Funções](#funes)
+- [Funções](#funções)
 - [Defer](#defer)
-- [Métodos](#mtodos)
+- [Métodos](#métodos)
 - [Interface e polimorfismo](#interface-e-polimorfismo)
-- [Referências](#referncias)
+- [Referências](#referências)
   
 # O que é Go Lang?
 A linguagem Go é uma linguagem de programação criada pela Google e lançada em códgio livre em 2009. É uma linguagem compilada e focada em produtividade e programação concorrente, baseada em trabalhos feitos no sistema operacional chamado Inferno.
@@ -416,8 +416,6 @@ func main() {
   }
   ```
 
-### 
-
 ## Acessar Valores
 Para acessar valores específicos da *struct*, usamos a notação de ponto, como em linguagens orientadas a objeto. Caso seja *structs* embutidos é só passar o nome da *struct* embutida (interna) e depois o nome do campo. E se o nome do campo da *struct* embutida seja diferente de todos os nomes do campo da *struct* principal, então o campo da *struct* interna é promovida para campo da *struct* principal.
 
@@ -635,7 +633,7 @@ func retornaumafuncao() func(int) int {
 
 ## Função Callback
 Função Callback é quando passamos uma função como argumento de outra função.
-[Códgio de exemplo](./cap12_aulaCallback.go)
+[Códgio de exemplo](./exercicios/cap12/cap12_aulaCallback.go)
 
 ## Closure
 Closure é cercar ou capturar um escopo (*scope*) para que possamos utilizá-lo em outro contexto. Closures nos permite salvar dados entre cahmadas de funções e ao mesmo tempo isolar estes dados do resto do código.
@@ -643,7 +641,7 @@ Closure é cercar ou capturar um escopo (*scope*) para que possamos utilizá-lo 
 ## Recursividade
 Funções recursivas são aquelas funções que chamam a si própria. Os exemplos mais comuns de recursividade são fatoriais, matrioskas, efeito droste e fractais.
 
-[Código de exemplo](./cap12_aulaRecursividade.go)
+[Código de exemplo](./exercicios/cap12/cap12_aulaRecursividade.go)
 
 # Defer
 *Defer*, do inglês, significa adiar. Na linguagem de programação Go, *Defer* é um *statement* (instrução) que é colocada antes de uma outra instrução, fazendo com que esta seja executada por último. Se houverem mais de um *Defer*, então o primeiro *Defer* que o compilador encontrar será o último a ser executado, como se fosse um FILO (First In, Last Out).
@@ -712,11 +710,13 @@ func main() {
 
 **Polimorfismo** em Go significa utilizar uma mesma função para mais de um tipo (`type`) se os mesmos fizerem parte da mesma interface.
 
-- [**Código de exemplo 1**](./cap12_interface_polimorfismo.go)
-- [**Código de exemplo 2**](./cap12_interface_polimorfismo_2.go)
+- [**Código de exemplo 1**](./exercicios/cap12/cap12_interface_polimorfismo.go)
+- [**Código de exemplo 2**](./exercicios/cap12/cap12_interface_polimorfismo_2.go)
 
 # Ponteiros
 Ponteiros, em linguagem de programação, é um objeto cujo valor aponta (ou refere-se) para outro valor armazenado em algum lugar da memória do computador que usa esse endereço de memória. Para obter o valor salvo nessa localização da memória, usa-se um processo chamado *dereferencing*. Assumindo que `x` seja uma variável qualquer e `p` seja um ponteiro que refere-se ao valor armazenado em `x`, então para exibir esse valor, por meio do ponteiro, usamos `*p`.
+
+Outro exemplo: [cap.15 exercício 2]()
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
