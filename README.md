@@ -725,22 +725,22 @@ Como visto no exemplo acima, existe um atalho para referenciar um valor de uma *
 Em Go é possível transformar uma estrutura de dados (*struct*) em JSON por meio do pacote `encoding/json` usando a função `Marshal`. É importante frisar que para que os campos da *struct* sejam exportados para *JSON*, a letra inicial dos campos e do nome da *struct* precisam estar em letra maiúscula. Logo, em Go, tudo que possuir a letra inicial maiúscula poderá ser exportado e estará visível para outros pacotes (*packages*).
 
 **Exemplo:**
-[Exemplo](./exemplos/cap16/exemplo_cap16_para_JSON.go)
+[Exemplo](./exemplos/cap16/exemplo_cap16_Marshal.go)
 
 Ao invés de utilizar a função `Marshal` é possível usar a função `Encode` para transformar um *JSON* em *struct*. A diferença entre essas funções é a forma como se usa cada uma. Na função `Marshal` o resultado é salvo em uma variável que pode ser manipula como o usuário desejar, já na `Encode` o resultado estará vinculado a uma interface que sempre será chamada quando usarmos a variável na qual está as informações obtidas do *JSON*.
-
-**Exemplo:**
-[Exemplo](./exemplos/cap16/exemplo_cap16_Decoder.go)
-
-## Transformando JSON para *struc* em Go
-De maneira similar a transformar uma *struct* em JSON, também é possível realizar o processo inverso, ou seja, capturar um *JSON* e transportar as informações para uma *struc* em Go utilizando o pacote `enconding/json` e a função `Unmarshal` ou `Decode`.
 [Mais informações sobre Marshal](https://pkg.go.dev/encoding/json#Marshal)
 
 **Exemplo:**
-[Exemplo](./exemplos/cap16/exemplo_cap16_de_JSON_para_struc.go)
+[Exemplo](./exemplos/cap16/exemplo_cap16_Encode.go)
+
+## Transformando JSON para *struc* em Go
+De maneira similar a transformar uma *struct* em JSON, também é possível realizar o processo inverso, ou seja, capturar um *JSON* e transportar as informações para uma *struc* em Go utilizando o pacote `enconding/json` e a função `Unmarshal` ou `Decode`.
+[Mais informações sobre Unmarshal](https://pkg.go.dev/encoding/json#Unmarshal)
+
+**Exemplo:**
+[Exemplo](./exemplos/cap16/exemplo_cap16_Unmarshal.go)
 
 Vale lembrar que no exemplo acima utilizamos *tags*. As *tags* servem para mapear os campos do *JSON* com os campos da *struc* que estará recebendo essas informações.
-[Mais informações sobre Unmarshal](https://pkg.go.dev/encoding/json#Unmarshal)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
