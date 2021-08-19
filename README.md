@@ -723,6 +723,9 @@ Como visto no exemplo acima, existe um atalho para referenciar um valor de uma *
 # JSON
 Em Go é possível transformar uma estrutura de dados (*struc*) em JSON por meio do pacote `encoding/json`. É importante frisar que para que os campos da *struc* sejam exportados para *JSON*, a letra inicial dos campos e do nome da *struc* precisam estar em letra maiúscula. Logo, em Go, tudo que possuir a letra inicial maiúscula poderá ser exportado e estará visível para outros pacotes (*packages*).
 
+**Exemplo:**
+[Exemplo](./exemplos/cap16/exemplo_cap16_JSON.go)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
