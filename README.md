@@ -720,6 +720,9 @@ Outro exemplo: [cap.15 exercício 2](./exercicios/cap15/cap15_exercicio02-pontei
 
 Como visto no exemplo acima, existe um atalho para referenciar um valor de uma *struct*, sendo que a maneira tradicional é `(*variavel).campoDaStruct` e o atalho é `variavel.campoDaStruct`. De acordo com a [documentação](https://golang.org/ref/spec#Selectors), como exceção, se o tipo da variavel é um tipo de ponteiro nomeado e `(*variavel).campoDaStruct` é uma expressão seletora válida que aponta para um campo, mas para um método, então é possível utilizar o atalho `variavel.campoDaStruct`.
 
+# JSON
+Em Go é possível transformar uma estrutura de dados (*struc*) em JSON por meio do pacote `encoding/json`. É importante frisar que para que os campos da *struc* sejam exportados para *JSON*, a letra inicial dos campos e do nome da *struc* precisam estar em letra maiúscula. Logo, em Go, tudo que possuir a letra inicial maiúscula poderá ser exportado e estará visível para outros pacotes (*packages*).
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
