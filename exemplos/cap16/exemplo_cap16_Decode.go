@@ -10,15 +10,15 @@ import (
 func main() {
 	const jsonStream = `
 	[
-		{"Name": "Ed", "Text": "Knock knock."},
-		{"Name": "Sam", "Text": "Who's there?"},
-		{"Name": "Ed", "Text": "Go fmt."},
-		{"Name": "Sam", "Text": "Go fmt who?"},
-		{"Name": "Ed", "Text": "Go fmt yourself!"}
+		{"Nome": "Zé", "Texto": "Knock knock."},
+		{"Nome": "Jão", "Texto": "Who's there?"},
+		{"Nome": "Zé", "Texto": "Go fmt."},
+		{"Nome": "Jão", "Texto": "Go fmt who?"},
+		{"Nome": "Zé", "Texto": "Go fmt yourself!"}
 	]
 `
 	type Message struct {
-		Name, Text string
+		Nome, Texto string
 	}
 	dec := json.NewDecoder(strings.NewReader(jsonStream))
 
@@ -38,7 +38,7 @@ func main() {
 			log.Fatal(err)
 		}
 
-		fmt.Printf("%v: %v\n", m.Name, m.Text)
+		fmt.Printf("%v: %v\n", m.Nome, m.Texto)
 	}
 
 	// read closing bracket
@@ -47,5 +47,4 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Printf("%T: %v\n", t, t)
-
 }
