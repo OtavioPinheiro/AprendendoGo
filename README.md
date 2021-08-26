@@ -721,7 +721,7 @@ Ponteiros, em linguagem de programação, é um objeto cujo valor aponta (ou ref
 
 Outro exemplo: [cap.15 exercício 2](./exercicios/cap15/cap15_exercicio02-ponteiros.go)
 
-Como visto no exemplo acima, existe um atalho para referenciar um valor de uma *struct*, sendo que a maneira tradicional é `(*variavel).campoDaStruct` e o atalho é `variavel.campoDaStruct`. De acordo com a [documentação](https://golang.org/ref/spec#Selectors), como exceção, se o tipo da variavel é um tipo de ponteiro nomeado e `(*variavel).campoDaStruct` é uma expressão seletora válida que aponta para um campo, mas para um método, então é possível utilizar o atalho `variavel.campoDaStruct`.
+Como visto no exemplo acima, existe um atalho para referenciar um valor de uma *struct*, sendo que a maneira tradicional é `(*variavel).campoDaStruct` e o atalho é `variavel.campoDaStruct`. De acordo com a [documentação](https://golang.org/ref/spec#Selectors), como exceção, se o tipo da variavel é um tipo de ponteiro nomeado e `(*variavel).campoDaStruct` é uma expressão seletora válida que aponta para um campo, mas não para um método, então é possível utilizar o atalho `variavel.campoDaStruct`.
 
 # JSON
 ## Transformando em JSON
