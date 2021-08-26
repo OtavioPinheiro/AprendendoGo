@@ -21,6 +21,9 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [Defer](#defer)
 - [Métodos](#métodos)
 - [Interface e polimorfismo](#interface-e-polimorfismo)
+- [Ponteiros](#ponteiros)
+- [JSON](#json)
+- [Bcrypt](#bcrypt)
 - [Referências](#referências)
   
 # O que é Go Lang?
