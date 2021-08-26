@@ -745,8 +745,8 @@ De maneira similar a transformar uma *struct* em JSON, também é possível real
 
 Vale lembrar que no exemplo acima utilizamos *tags*. As *tags* servem para mapear os campos do *JSON* com os campos da *struc* que estará recebendo essas informações.
 
-# bcrypt
-bcrypt é um método de criptografia do tipo hash para senhas baseado no *BlowFish*. Foi criado por Niels Provos e David Mazières e apresentado na conferência da USENIX em 1999.
+# Bcrypt
+Bcrypt é um método de criptografia do tipo hash para senhas baseado no *BlowFish*. Foi criado por Niels Provos e David Mazières e apresentado na conferência da USENIX em 1999.
 
 Este método apresenta uma maior segurança em relação a maioria dos outros métodos criptográficos, pois é resistente à ataques de força bruta. [Mais informações](https://pt.wikipedia.org/wiki/Bcrypt#:~:text=bcrypt%20%C3%A9%20um%20m%C3%A9todo%20de,para%20senhas%20baseado%20no%20Blowfish.&text=O%20algoritmo%20bcrypt%20foi%20implementado,fun%C3%A7%C3%A3o%20%22crypt%22%20do%20UNIX.)
 
