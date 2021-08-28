@@ -764,7 +764,13 @@ Em palavras mais simples, concorrência trata-se da parte de software em que o m
 
 [Referência](https://www.treinaweb.com.br/blog/concorrencia-paralelismo-processos-threads-programacao-sincrona-e-assincrona)
 
-Em linguagem Go, os processos concorrentes, as chamadas *Goroutines*, serão, ou sempre procurarão ser, executadas como processos concorrentes paralelos, aproveitando sempre o máximo do processador, utilizando o máximo de núcleos possíveis.
+## Goroutines & WaitGroups
+Em linguagem Go, os processos que se dividem em uma ou mais tarefas concorrentes, as chamadas *Goroutines*, serão, ou sempre procurarão ser, executadas como processos concorrentes paralelos, aproveitando sempre o máximo do processador, utilizando o máximo de núcleos possíveis. Para criar uma *Goroutine* basta acrescentar a palavra reservada `go` antes de qualquer função. É importante ressaltar que quando estamos trabalhando com *goroutines* é necessário esperar que a *goroutine* termine de executar, caso contrário o programa pode terminar, no caso a execução da `func main()`, e a execução da *goroutine* pode nem ter começado. Para isso utilizamos os *WaitGroups*. Então, temos o `sync.WaitGroup`, normalmente declarado como *package level escope*, que possui 3 funções principais:
+- `Add()`: Função onde se deverá informar a quantidade total de *goroutines* no programa. Normalmente é declarada no início da função *main*, antes da declaração das *goroutines*;
+- `Wait()`: Função que informa para o programa esperar as *goroutines* executarem. Deve estar na última parte função *main*, antes do seu encerramento;
+- `Done()`: Função que informa para o programa que uma determinada *goroutine* terminou a execução. Deve ser informada na última parte das *goroutines*.
+
+[Exemplo de goroutine](./exemplos/cap18/exemplo01_goroutine/goroutine.go)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
