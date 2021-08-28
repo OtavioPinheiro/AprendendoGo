@@ -755,6 +755,9 @@ Este método apresenta uma maior segurança em relação a maioria dos outros m�
 
 # Concorrência
 Concorrência, no sentido de programação concorrente ou programação simultânea, é um paradigma de programação para a construção de programas de computador que fazem uso da execução simultânea de várias tarefas computacionais interativas, que podem ser implementadas como programas separados ou como um conjunto de *threads* criadas por um único programa. [Wikipédia - Programação concorrente](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_concorrente#:~:text=Programa%C3%A7%C3%A3o%20concorrente%20ou%20programa%C3%A7%C3%A3o%20simult%C3%A2nea,threads%20criadas%20por%20um%20%C3%BAnico)
+Em palavras mais simples, concorrência trata-se da parte de software em que o mesmo possui uma ou várias funções que são executadas simultaneamente, gerando várias *threads*.
+
+## Concorrência vs Paralelismo
 
 
 # Referências
