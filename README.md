@@ -758,7 +758,13 @@ Concorrência, no sentido de programação concorrente ou programação simultâ
 Em palavras mais simples, concorrência trata-se da parte de software em que o mesmo possui uma ou várias funções que são executadas simultaneamente, gerando várias *threads*.
 
 ## Concorrência vs Paralelismo
-**Concorrência** é sobre a execução sequencial disputada de um conjunto de tarefas independentes.
+**Concorrência** é sobre a execução sequencial disputada de um conjunto de tarefas independentes. Em sistema operacional o responsável pelo gerenciamento dos processos é o escalonador de processos, quanto que, em uma linguagem de programação, como *Go Lang*, o responsável por essa tarefa é chamado de *scheduler*. Escalonadores preemptivos favorecem a concorrência pausando e resumindo tarefas para que todas possam ser executadas, como é o caso dos sistemas operacionais modernos onde os processos e *threads* executam as trocas de contexto. Portanto, pode-se concluir que concorrência está relacionada com a parte do *software* e significa executar duas ou mais tarefas ao mesmo tempo.
+
+**Paralelismo** trata-se da execução paralela de tarefas, ou seja, de forma simultânea, porém está realacionado com a parte de *hardware*, uma vez que depende da quantidade de núcleos(cores) do processador. Quanto mais núcleos, mais tarefas paralelas podem ser executadas. É uma forma de distribuir processamento em mais de um núcleo. Logo, conclui-se que paralelismo implica em concorrência, porém concorrência não implica em paralelismo, ou seja, para haver paralelismo é necessário ter concorrência, mas para ter concorrência não é necessário ter paralelismo, porque em sistemas com processadores de apenas um núcleo é possível ter processos concorrentes, basta ir pausando e resumindo uma tarefa para executar outra.
+
+[Referência](https://www.treinaweb.com.br/blog/concorrencia-paralelismo-processos-threads-programacao-sincrona-e-assincrona)
+
+Em linguagem Go, os processos concorrentes, as chamadas *Goroutines*, serão, ou sempre procurarão ser, executadas como processos concorrentes paralelos, aproveitando sempre o máximo do processador, utilizando o máximo de núcleos possíveis.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
