@@ -758,7 +758,7 @@ Concorrência, no sentido de programação concorrente ou programação simultâ
 Em palavras mais simples, concorrência trata-se da parte de software em que o mesmo possui uma ou várias funções que são executadas simultaneamente, gerando várias *threads*.
 
 ## Concorrência vs Paralelismo
-
+**Concorrência** é sobre a execução sequencial disputada de um conjunto de tarefas independentes.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
