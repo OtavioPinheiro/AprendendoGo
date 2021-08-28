@@ -24,6 +24,7 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [Ponteiros](#ponteiros)
 - [JSON](#json)
 - [Bcrypt](#bcrypt)
+- [Concorrência](#concorrência)
 - [Referências](#referências)
   
 # O que é Go Lang?
@@ -751,6 +752,10 @@ Bcrypt é um método de criptografia do tipo hash para senhas baseado no *BlowFi
 Este método apresenta uma maior segurança em relação a maioria dos outros métodos criptográficos, pois é resistente à ataques de força bruta. [Mais informações](https://pt.wikipedia.org/wiki/Bcrypt#:~:text=bcrypt%20%C3%A9%20um%20m%C3%A9todo%20de,para%20senhas%20baseado%20no%20Blowfish.&text=O%20algoritmo%20bcrypt%20foi%20implementado,fun%C3%A7%C3%A3o%20%22crypt%22%20do%20UNIX.)
 
 [Exemplo de uso](./cap16/../exemplos/cap16/exemplo_cap16_bcrypt.go)
+
+# Concorrência
+Concorrência, no sentido de programação concorrente ou programação simultânea, é um paradigma de programação para a construção de programas de computador que fazem uso da execução simultânea de várias tarefas computacionais interativas, que podem ser implementadas como programas separados ou como um conjunto de *threads* criadas por um único programa. [Wikipédia - Programação concorrente](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_concorrente#:~:text=Programa%C3%A7%C3%A3o%20concorrente%20ou%20programa%C3%A7%C3%A3o%20simult%C3%A2nea,threads%20criadas%20por%20um%20%C3%BAnico)
+
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
