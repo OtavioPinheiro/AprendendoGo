@@ -776,6 +776,13 @@ Em linguagem Go, os processos que se dividem em uma ou mais tarefas concorrentes
 1. Para saber o número de processadores basta executar `fmt.Println(runtime.NumCPU())` no início da função *main*.
 2. Para saber o número de *Goroutines* basta executar `fmt.Println(runtime.NumGoroutine())`. Se for chamada no início o resultado será 1, pois a função *main* é uma *Goroutine* e se for chamada no final da função *main* irá retornar o número total de *Goroutines* chamadas durante todo o programa.
 
+# Condição de corrida
+Uma condição de corrida é uma falha num sistema ou processo em que o resultado do processo é inesperadamente dependente da sequência ou sincronia de outros eventos. Apesar de ser conhecido por "condição de corrida", uma melhor tradução seria "condição de concorrência", pois o problema está relacionado justamente ao gerenciamento da concorrência entre processos teoricamente simultâneos.
+
+[Referência](https://pt.wikipedia.org/wiki/Condi%C3%A7%C3%A3o_de_corrida)
+
+Em outras palavras, condição de corrida é quando o mesmo dado, ou conjunto de dados, é compartilhado por dois(ou mais) processos(*threads*) diferentes.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
