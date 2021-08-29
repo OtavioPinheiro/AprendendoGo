@@ -781,7 +781,9 @@ Uma condição de corrida é uma falha num sistema ou processo em que o resultad
 
 [Referência](https://pt.wikipedia.org/wiki/Condi%C3%A7%C3%A3o_de_corrida)
 
-Em outras palavras, condição de corrida é quando o mesmo dado, ou conjunto de dados, é compartilhado por dois(ou mais) processos(*threads*) diferentes.
+Em outras palavras, condição de corrida é quando o mesmo dado, ou conjunto de dados, é compartilhado por dois(ou mais) processos(*threads*) diferentes que estão sendo executados de maneira concorrente. Para resolver esse problema, Go  possui algumas aboradagens como *mutex*, *atomic* e *channels*, sendo a última a mais utilizada.
+
+[Referência](https://golang.org/doc/effective_go#concurrency)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
