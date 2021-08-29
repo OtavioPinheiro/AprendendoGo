@@ -790,9 +790,12 @@ Em outras palavras, condição de corrida é quando o mesmo dado, ou conjunto de
 **OBS.:** Caso deseje visualizar se o códgio possui uma condição de corrida, adicione a *flag* `-race` na hora de executar o programa. Então fica `go run -race nomedoprograma.go`. No final será exibido na tela do terminal quantas condições de corridas há no programa informado.
 
 ## Mutex
-Mutex(Exclusão mútua) garante que apenas um determinado trecho de código, ou um determinado valor, seja executado em um dado momento, evitando, assim, as condições de corrida. Os *mutexes* conseguem realizar essa tarefa "trancando" o valor de uma variável na qual irá ser acessada por várias *threads*. Utiliza-se *lock* para trancar e *unlock* para destrancar.
+Mutex(Exclusão mútua) garante que apenas um determinado trecho de código, ou um determinado valor, seja executado em um dado momento, evitando, assim, as condições de corrida. Os *Mutex* conseguem realizar essa tarefa "trancando" o valor de uma variável na qual irá ser acessada por várias *threads*. Utiliza-se *lock* para trancar e *unlock* para destrancar.
 
 [Exemplo de Mutex](./exemplos/cap18/exemplo_mutex/mutex.go)
+
+## Atomic
+Da mesma maneira que os *Mutex*, *Atomic* também tem o objetivo de "trancar" um determinado valor de uma variável para evitar as condições de corrida. O pacote *Atomic* fornece funções de manipulação de memória para tipos primitivos, ideal para aplicações de baixo-nível que implementam sincronização de algorítmos. Com exceção dessas aplicações de baixo-nível, essa sincronização é melhor feita com canais(*channels*) ou com os próprios recursos do pacote de sincronização, o pacote `sync`. Em outras palavras, para evitar condições de corrida recomenda-se utilizar as funções do pacote `sync`, que é o caso do *Mutex* que já foi demonstrado, ou utilizar canais, os *channels*, *Atomic* só é recomendado para aplicações de baixo-nível.[Documentação](https://pkg.go.dev/sync/atomic)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
