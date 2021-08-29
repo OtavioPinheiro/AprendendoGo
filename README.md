@@ -770,7 +770,7 @@ Em linguagem Go, os processos que se dividem em uma ou mais tarefas concorrentes
 - `Wait()`: Função que informa para o programa esperar as *goroutines* executarem. Deve estar na última parte função *main*, antes do seu encerramento;
 - `Done()`: Função que informa para o programa que uma determinada *goroutine* terminou a execução. Deve ser informada na última parte das *goroutines*.
 
-[Exemplo de goroutine](./exemplos/cap18/exemplo01_goroutine/goroutine.go)
+[Exemplo de goroutine](./exemplos/cap18/exemplo_goroutine/goroutine.go)
 
 **DICAS:**
 1. Para saber o número de processadores basta executar `fmt.Println(runtime.NumCPU())` no início da função *main*.
@@ -784,6 +784,13 @@ Uma condição de corrida é uma falha num sistema ou processo em que o resultad
 Em outras palavras, condição de corrida é quando o mesmo dado, ou conjunto de dados, é compartilhado por dois(ou mais) processos(*threads*) diferentes que estão sendo executados de maneira concorrente. Para resolver esse problema, Go  possui algumas aboradagens como *mutex*(exclusão mútua, garante que nenhuma outra fução irá utilizar essa variável até a mesma terminar de usá-la ou gravar algo nela), *atomic* e *channels*(canais), sendo a última a mais utilizada.
 
 [Referência](https://golang.org/doc/effective_go#concurrency)
+
+[Exemplo de uma condição de corrida](./exemplos/cap18/exemplo_condicaoDeCorrida/condicaoDeCorrida.go)
+
+**OBS.:** Caso deseje visualizar se o códgio possui uma condição de corrida, adicione a *flag* `-race` na hora de executar o programa. Então fica `go run -race nomedoprograma.go`. No final será exibido na tela do terminal quantas condições de corridas há no programa informado.
+
+## Mutex
+Mutex(Exclusão mútua) garante que apenas um determinado trecho de código, ou um determinado valor, seja executado em um dado momento, evitando, assim, as condições de corrida.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
