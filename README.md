@@ -772,6 +772,10 @@ Em linguagem Go, os processos que se dividem em uma ou mais tarefas concorrentes
 
 [Exemplo de goroutine](./exemplos/cap18/exemplo01_goroutine/goroutine.go)
 
+**DICAS:**
+1. Para saber o número de processadores basta executar `fmt.Println(runtime.NumCPU())` no início da função *main*.
+2. Para saber o número de *Goroutines* basta executar `fmt.Println(runtime.NumGoroutine())`. Se for chamada no início o resultado será 1, pois a função *main* é uma *Goroutine* e se for chamada no final da função *main* irá retornar o número total de *Goroutines* chamadas durante todo o programa.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
