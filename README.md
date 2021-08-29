@@ -797,6 +797,8 @@ Mutex(Exclusão mútua) garante que apenas um determinado trecho de código, ou 
 ## Atomic
 Da mesma maneira que os *Mutex*, *Atomic* também tem o objetivo de "trancar" um determinado valor de uma variável para evitar as condições de corrida. O pacote *Atomic* fornece funções de manipulação de memória para tipos primitivos, ideal para aplicações de baixo-nível que implementam sincronização de algorítmos. Com exceção dessas aplicações de baixo-nível, essa sincronização é melhor feita com canais(*channels*) ou com os próprios recursos do pacote de sincronização, o pacote `sync`. Em outras palavras, para evitar condições de corrida recomenda-se utilizar as funções do pacote `sync`, que é o caso do *Mutex* que já foi demonstrado, ou utilizar canais, os *channels*, *Atomic* só é recomendado para aplicações de baixo-nível.[Documentação](https://pkg.go.dev/sync/atomic)
 
+[Exemplo de Atomic](./exemplos/cap18/exemplo_atomic/atomic.go)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
