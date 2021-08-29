@@ -790,7 +790,9 @@ Em outras palavras, condição de corrida é quando o mesmo dado, ou conjunto de
 **OBS.:** Caso deseje visualizar se o códgio possui uma condição de corrida, adicione a *flag* `-race` na hora de executar o programa. Então fica `go run -race nomedoprograma.go`. No final será exibido na tela do terminal quantas condições de corridas há no programa informado.
 
 ## Mutex
-Mutex(Exclusão mútua) garante que apenas um determinado trecho de código, ou um determinado valor, seja executado em um dado momento, evitando, assim, as condições de corrida.
+Mutex(Exclusão mútua) garante que apenas um determinado trecho de código, ou um determinado valor, seja executado em um dado momento, evitando, assim, as condições de corrida. Os *mutexes* conseguem realizar essa tarefa "trancando" o valor de uma variável na qual irá ser acessada por várias *threads*. Utiliza-se *lock* para trancar e *unlock* para destrancar.
+
+[Exemplo de Mutex](./exemplos/cap18/exemplo_mutex/mutex.go)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
