@@ -805,7 +805,12 @@ Abaixo seguem alguns comandos da linguagem Go e a sua descrição.
 | Comando | Descrição |
 |---------|-----------|
 | go version | Imprime na tela do terminal qual a versão da linguagem Go que está instalada |
-| go env | |
+| go env | Variáveis de sistema relacionadas à Linguagem Go |
+| go help |  |
+| go fmt |  |
+| go run |  |
+| go build |  |
+| go install |  |
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
