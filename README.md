@@ -809,8 +809,8 @@ Abaixo seguem alguns comandos da linguagem Go e a sua descrição.
 | go help | Exibe uma lista de comandos utilizados na linguagem Go e suas descrições. É possível passar um nome de pacote como parâmetro para que seja exibido mais detalhes sobre o pacote. |
 | go fmt | Executa `gofmt` nos pacotes principais(fontes). |
 | go run | Compila e executa um programa Go. É possível executar `go run *.go` para que todos os programas com a extensão `.go` sejam executados de uma vez. |
-| go build | Compila pacotes e dependências. Ou seja, gera um arquivo binário a partir do arquivo `.go` e o salva no diretório(pasta) atual. Caso haja erros no programa .go o arquivo binário(executável) não será gerado e o erro será informado via terminal.|
-| go install | Compila e instala os pacotes e as dependências |
+| go build | Compila pacotes e dependências. Ou seja, em casos de arquivos executáveis(que possuem a `func main`) gera um arquivo binário a partir do arquivo `.go` e, a partir desse arquivo, gera um executável e o salva no diretório(pasta) atual. Caso haja erros no programa `.go` o arquivo executável não será gerado e o erro será informado via terminal. Em casos de pacotes, gera um arquivo binário e, caso haja erros, informa-os e, ao final, descarta o arquivo executável.|
+| go install | Compila e instala os pacotes e as dependências. De forma mais detalhada, para um arquivo executável, fará o *build*, em seguida, nomeará o arquivo com o nome do diretório atual e, por fim, salvará o arquivo binário em `$GOPATH/bin`. Para um pacote, fará o *build*, salvará o arquivo binário em `$GOPATH/pkg` e criará *archive files*, arquivos com extensão `.a` que são os arquivos pré-compilados utilizados pelos *imports*. |
 | go clean | Remove arquivos. |
 | go doc | Exibe a documentação para um determinado pacote. |
 | go bug | Inicia um reporte de bug. |
