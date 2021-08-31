@@ -799,6 +799,14 @@ Da mesma maneira que os *Mutex*, *Atomic* também tem o objetivo de "trancar" um
 
 [Exemplo de Atomic](./exemplos/cap18/exemplo_atomic/atomic.go)
 
+# Comandos Go
+Abaixo seguem alguns comandos da linguagem Go e a sua descrição.
+
+| Comando | Descrição |
+|---------|-----------|
+| go version | Imprime na tela do terminal qual a versão da linguagem Go que está instalada |
+| go env | |
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
