@@ -806,11 +806,21 @@ Abaixo seguem alguns comandos da linguagem Go e a sua descrição.
 |---------|-----------|
 | go version | Imprime na tela do terminal qual a versão da linguagem Go que está instalada |
 | go env | Variáveis de sistema relacionadas à Linguagem Go |
-| go help |  |
-| go fmt |  |
-| go run |  |
-| go build |  |
-| go install |  |
+| go help | Exibe uma lista de comandos utilizados na linguagem Go e suas descrições. É possível passar um nome de pacote como parâmetro para que seja exibido mais detalhes sobre o pacote. |
+| go fmt | Executa `gofmt` nos pacotes principais(fontes). |
+| go run | Compila e executa um programa Go. |
+| go build | Compila pacotes e dependências. |
+| go install | Compila e instala os pacotes e as dependências |
+| go clean | Remove arquivos. |
+| go doc | Exibe a documentação para um determinado pacote. |
+| go bug | Inicia um reporte de bug. |
+| go fix | Executa `go tool fix` nos pacotes.|
+| go generate | Gera arquivos Go a partir do processamento do arquivo fonte. |
+| go get | Faz o download e a instalação dos pacotes e as dependências. |
+| go list | Lista todos os pacotes instalados. |
+| go test | Testa os pacotes |
+| go tool | Executa uma ferramenta específica. |
+| go vet | Executa `go tool vet` nos pacotes. |
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
