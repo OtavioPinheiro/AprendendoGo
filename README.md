@@ -829,3 +829,4 @@ Abaixo seguem alguns comandos da linguagem Go e a sua descrição.
 - GO. **The Go Programming Language Specification**. Disponível em: https://golang.org/ref/spec
 - GO. **Effective Go**. Disponível em: https://golang.org/doc/effective_go
 - Tutorials Point. **Tutorial GO**. Disponível em: https://](https://www.tutorialspoint.com/go/go_functions.htm)
+- rakyll. **Style guideline for Go packages**. Disponível em: https://rakyll.org/style-packages/
