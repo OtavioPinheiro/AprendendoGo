@@ -808,8 +808,8 @@ Abaixo seguem alguns comandos da linguagem Go e a sua descrição.
 | go env | Variáveis de sistema relacionadas à Linguagem Go |
 | go help | Exibe uma lista de comandos utilizados na linguagem Go e suas descrições. É possível passar um nome de pacote como parâmetro para que seja exibido mais detalhes sobre o pacote. |
 | go fmt | Executa `gofmt` nos pacotes principais(fontes). |
-| go run | Compila e executa um programa Go. |
-| go build | Compila pacotes e dependências. |
+| go run | Compila e executa um programa Go. É possível executar `go run *.go` para que todos os programas com a extensão `.go` sejam executados de uma vez. |
+| go build | Compila pacotes e dependências. Ou seja, gera um arquivo binário a partir do arquivo `.go` e o salva no diretório(pasta) atual. Caso haja erros no programa .go o arquivo binário(executável) não será gerado e o erro será informado via terminal.|
 | go install | Compila e instala os pacotes e as dependências |
 | go clean | Remove arquivos. |
 | go doc | Exibe a documentação para um determinado pacote. |
