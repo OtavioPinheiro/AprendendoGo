@@ -836,6 +836,11 @@ Os canais podem ser bidirecionais ou unidirecionais. Os unidirecionais servem pa
 
 [Exemplo de unidirecional](./exemplos/cap21/canaisUnidirecionais.go)
 
+## Range e Close()
+A função close() serve para fechar a comunicação de um canal. Um canal *sender*, canal específico para enviar dados, pode ser fechado para indicar que não mais valores para serem enviados. Os canais *receivers*, específicos para receber dados, podem testar se um canal está fechado, atribuindo um segundo parâmetro à expressão, ou seja, `v, ok := <-ch`, se a variável `ok` for `false` então não há mais valores para receber, logo o canal *sender* está fechado.
+
+
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
