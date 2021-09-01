@@ -22,11 +22,13 @@ func criaGoroutines(qtdeGoroutines int) {
 	for i := 0; i < qtdeGoroutines; i++ {
 		go func() {
 			atomic.AddInt64(&contator, 1)
+			atomic.LoadInt64(&contator)
 			runtime.Gosched()
 			wg.Done()
 		}()
 	}
 
 	fmt.Println("Total de Goroutines:\t", qtdeGoroutines)
-	fmt.Println("Total do contador:\t\t", contator)
+	fmt.Println("Total do contador:\t\t", contator) //ao invés de usado a variável contador,
+	//poderia ter usado atomic.LoadInt64(&contador)
 }
