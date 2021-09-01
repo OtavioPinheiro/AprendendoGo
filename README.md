@@ -845,6 +845,11 @@ A função `close()` se faz necessária quando estamos usando um *loop*(laço de
 
 [Exemplo 02 - Contagem](./exemplos/cap21/Range_Close/exemplo02/close.go)
 
+## Select
+*Select* é como *switch*, porém para canais e não é sequencial. Ou seja, o *select* bloqueia os canais até que os dados que especificamos nele seja igual ao *case*(caso) e, aí sim, executa-os. Se houver mais de um caso que satisfaça a condição, então o *select* irá escolher um aleatoriamente.
+
+[]()
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
