@@ -828,7 +828,13 @@ Canais em Go é uma maneira de transmitir dados entre Goroutines. Há dois tipos
 - [FONTE 2](https://medium.com/trainingcenter/goroutines-e-go-channels-f019784d6855)
 
 [Exemplo de canal unbuffered](./exemplos/cap21/unbuffered/unbufferedChannel.go)
+
 [Exemplo de canal buffered](./exemplos/cap21/buffered/bufferedChannel.go)
+
+## Canais direcionais
+Os canais podem ser bidirecionais ou unidirecionais. Os unidirecionais servem para apenas uma determinada tarefa, ou seja, temos o *send channel*(`send chan <-`) que serve apenas para enviar dados e o *receive channel*(`receive <- chan`) que serve apenas para receber dados. Essa funcionalidade impede que, por exemplo, dados sejam escritos em canais errados, em outras palavras, o *type-checking mechanisms* do compilador faz com que não seja possível, por exemplo, escrever em um canal de leitura. Já os bidirecionais podem enviar e receber dados sem problemas.
+
+
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
