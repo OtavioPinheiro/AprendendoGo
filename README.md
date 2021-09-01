@@ -822,6 +822,11 @@ Abaixo seguem alguns comandos da linguagem Go e a sua descrição.
 | go tool | Executa uma ferramenta específica. |
 | go vet | Executa `go tool vet` nos pacotes. |
 
+# Canais
+Canais em Go é uma maneira de transmitir dados entre Goroutines. Há dois tipos de *Go Channels*, os *unbuffered*(sem buffer) e os *buffered*(com buffer). Da maneira *unbuffered* é a maneira padrão dos canais e significa que os canais só aceitarão enviar os dados de uma *goroutine* para outra se houver um receptor desses dados, ou seja, em palavras simples, uma *goroutine* se encarregará de enviar os dados pelo *channel* e outra *goroutine* se encarregará de receber esses dados. Da maneira *buffered* não é necessário ter uma *goroutine* para receber os dados enviados, porém aceita até um limite de valores para ser enviado dessa maneira.
+- [FONTE 1](https://gobyexample.com/channel-buffering)
+- [FONTE 2](https://medium.com/trainingcenter/goroutines-e-go-channels-f019784d6855)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
