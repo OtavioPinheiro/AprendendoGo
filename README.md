@@ -827,6 +827,9 @@ Canais em Go é uma maneira de transmitir dados entre Goroutines. Há dois tipos
 - [FONTE 1](https://gobyexample.com/channel-buffering)
 - [FONTE 2](https://medium.com/trainingcenter/goroutines-e-go-channels-f019784d6855)
 
+[Exemplo de canal unbuffered](./exemplos/cap21/unbuffered/unbufferedChannel.go)
+[Exemplo de canal buffered](./exemplos/cap21/buffered/bufferedChannel.go)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
