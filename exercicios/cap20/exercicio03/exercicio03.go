@@ -30,5 +30,5 @@ func criaGoroutines(qtdeGoroutines int) {
 	}
 
 	fmt.Println("Total de Goroutines:\t", qtdeGoroutines)
-	fmt.Println("Total do contador:\t", contator)
+	fmt.Println("Total do contador:\t\t", contator)
 }
