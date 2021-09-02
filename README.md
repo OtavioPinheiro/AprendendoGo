@@ -857,6 +857,10 @@ A função `close()` se faz necessária quando estamos usando um *loop*(laço de
 ## Expressão *comma ok*
 Como já mencionado antes é possível atribuir um segundo parâmetro aos canais para que possamos saber se estão abertos ou fechados e evitar que dados errados sejam lidos pelo canal, esse parâmetro é chamado de *comma ok*. O *comma ok* também é usado para *map* para que possamos saber se quando recebemos um valor 0 é porque foi passado esse valor ao *map*, ou trata-se de um valor que está faltando. Logo, para realizar essa tarefa usa-se uma variável, normalmente booleana, com nome `ok` e se ela for `true` significa que o valor foi de fato passado ao *map*, caso contrário, se for `false`, significa que o valor, no caso 0, representa um valor faltando. [Referência](https://golang.org/doc/effective_go#maps)
 
+[Exemplo 01 exercício anterior](./exemplos/cap21/commaOK/exemplo01/commaOK_select.go)
+
+[Exemplo 02](./exemplos/cap21/commaOK/exemplo02/commaOK_maps.go)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
