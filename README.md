@@ -852,6 +852,8 @@ A função `close()` se faz necessária quando estamos usando um *loop*(laço de
 
 [Exemplo 02](./exemplos/cap21/Select/exemplo02)
 
+[Exemplo 03](./exemplos/cap21/Select/exemplo03)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
