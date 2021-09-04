@@ -861,6 +861,9 @@ Como já mencionado antes é possível atribuir um segundo parâmetro aos canais
 
 [Exemplo 02](./exemplos/cap21/commaOK/exemplo02/commaOK_maps.go)
 
+# Convergência
+Convergência, neste caso, é quando informação de vários canais é enviada a um número menor de canais.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
