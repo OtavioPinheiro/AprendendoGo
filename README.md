@@ -864,6 +864,10 @@ Como já mencionado antes é possível atribuir um segundo parâmetro aos canais
 # Convergência
 Convergência, neste caso, é quando informação de vários canais é enviada a um número menor de canais.
 
+[Exemplo por Todd](./exemplos/cap21/convergencia/exemplo01/convergencia.go)
+
+[Exemplo Rob Pike]()
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
