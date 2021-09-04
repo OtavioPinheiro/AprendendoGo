@@ -866,7 +866,7 @@ Convergência, neste caso, é quando informação de vários canais é enviada a
 
 [Exemplo por Todd](./exemplos/cap21/convergencia/exemplo01/convergencia.go)
 
-[Exemplo Rob Pike]()
+[Exemplo Rob Pike](./exemplos/cap21/convergencia/exemplo02/convergencia.go)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
