@@ -881,6 +881,8 @@ Em servidores Go, cada solicitação(*request*) recebida é tratada em sua próp
 - [Exemplo usando a função WithCancel()](./exemplos/cap21/context/exemplo01/context.go) -> [Referência](https://play.golang.org/p/Lmbyn7bO7e)
 - [Exemplo 02 usando a função WithCancel()](./exemplos/cap21/context/exemplo02/context.go) -> [Referência](https://play.golang.org/p/wvGmvMzIMW)
 - [Exemplo usando a função WithDeadline()](./exemplos/cap21/context/exemplo03/context.go) -> [Referência](https://play.golang.org/p/Q6mVdQqYTt)
+- [Exemplo usando a função WithTimeout()](./exemplos/cap21/context/exemplo04/context.go) -> [Referência](https://play.golang.org/p/OuES9sP_yX)
+- [Exemplo usando WithValue()](./exemplos/cap21/context/exemplo05/context.go) -> [Referência](https://play.golang.org/p/8JDCGk1K4P)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
