@@ -862,13 +862,14 @@ Como já mencionado antes é possível atribuir um segundo parâmetro aos canais
 [Exemplo 02](./exemplos/cap21/commaOK/exemplo02/commaOK_maps.go)
 
 # Convergência
-Convergência, neste caso, é quando informação de vários canais é enviada a um número menor de canais.
+Convergência, neste caso, é quando a informação de vários canais é enviada a um número menor de canais.
 
 [Exemplo por Todd](./exemplos/cap21/convergencia/exemplo01/convergencia.go)
 
 [Exemplo Rob Pike](./exemplos/cap21/convergencia/exemplo02/convergencia.go)
 
 # Divergência
+Divergência, neste caso, é quando a informação de um único canal (ou poucos canais) é enviada a um número maior de canais. É o oposto de convergência.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
