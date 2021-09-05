@@ -875,6 +875,9 @@ Divergência, neste caso, é quando a informação de um único canal (ou poucos
 
 [Exemplo 02](./exemplos/cap21/divergencia/exemplo02/divergencia.go)
 
+# Context
+Em servidores Go, cada solicitação(*request*) recebida é tratada em sua própria *goroutine*. Geralmente manipuladores de requisições(*Request Handlers*) iniciam *goroutines* para acessar *backends* como, por exemplo, banco de dados e servidores RPC(*Remote Procedure Call*), Chamada de Procedimento Remoto, trata-se de uma tecnologia de comunicação entre processos que permite um programa de computador chamar um procedimento em outro espaço de endereçamento(geralmente em outro computador, conectado a uma rede).[Mais sobre RPC](https://pt.wikipedia.org/wiki/Chamada_de_procedimento_remoto). O conjunto de *goroutines* trabalhando em uma requisição tipicamente precisa de acesso ao valor específico da requisição como a identidade do usuário final, tokens de autorização e a duração das requisições(*request's deadline*). Quando uma requisição é cancelada ou o tempo de duração da requisição é excedido(*time out*), todas as *goroutines* trabalhando naquela requisição deveriam sair(deixar de ser executada) rapidamente, para que o sistema possa recuperar quaisquer recursos que estavam sendo utilizados. Na Google foi desenvolvido o *package context* que torna fácil a passagem de valores de escopo de requisição(*request's scoped values*), sinais de cancelamento e *deadlines* através dos limites da API para todas as *goroutines* envolvidas no tratamento da requisição. O pacote está publicamente disponível como `context`.[Sobre Context](https://blog.golang.org/context)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
