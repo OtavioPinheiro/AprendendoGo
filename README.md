@@ -871,6 +871,10 @@ Convergência, neste caso, é quando a informação de vários canais é enviada
 # Divergência
 Divergência, neste caso, é quando a informação de um único canal (ou poucos canais) é enviada a um número maior de canais. É o oposto de convergência.
 
+[Exemplo 01](./exemplos/cap21/divergencia/exemplo01/divergencia.go)
+
+[Exemplo 02](./exemplos/cap21/divergencia/exemplo02/divergencia.go)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
