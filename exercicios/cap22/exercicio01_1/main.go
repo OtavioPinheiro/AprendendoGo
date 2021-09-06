@@ -1,5 +1,6 @@
-//Resolva o problema do código.
-//all goroutines are asleep - deadlock
+// Faça o código funcionar
+// Link: https://play.golang.org/p/j-EA6003P0
+// Erro: all goroutines are asleep - deadlock
 package main
 
 import (
