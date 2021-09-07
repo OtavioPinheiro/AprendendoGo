@@ -25,6 +25,12 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [JSON](#json)
 - [Bcrypt](#bcrypt)
 - [Concorrência](#concorrência)
+- [Condição de corrida](#condição-de-corrida)
+- [Comandos Go](#comandos-go)
+- [Canais](#canais)
+- [Convergência](#convergência)
+- [Divergência](#divergência)
+- [Context](#context)
 - [Referências](#referências)
   
 # O que é Go Lang?
