@@ -894,7 +894,7 @@ Em servidores Go, cada solicitação(*request*) recebida é tratada em sua próp
 - [Exemplo usando WithValue()](./exemplos/cap21/context/exemplo05/context.go) -> [Referência](https://play.golang.org/p/8JDCGk1K4P)
 
 # Tratamento de erros
-Em linguagem GO, ao contrário das outras linguagens, não há exceções(*exceptions*). A linguagem tarta essas exceções e erros de uma forma diferente, utiliza o retorno de múltiplos valores das funções para realizar esse tratamento. Então, em uma dada função, existe um valor do tipo *error type* e caso ele seja nulo(*nil*) significa que não houve nenhum erro e o programa pode prosseguir, caso contrário o erro exibido e o programa é interrompido.
+Em linguagem GO, ao contrário das outras linguagens, não há exceções(*exceptions*). A linguagem tarta essas exceções e erros de uma forma diferente, utiliza o retorno de múltiplos valores das funções para realizar esse tratamento. Então, em uma dada função, existe um valor do tipo *error type* e caso ele seja nulo(*nil*) significa que não houve nenhum erro e o programa pode prosseguir, caso contrário o erro exibido e o programa é interrompido. [Fonte](https://golang.org/doc/faq#exceptions)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
