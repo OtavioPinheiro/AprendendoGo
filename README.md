@@ -856,11 +856,11 @@ A função `close()` se faz necessária quando estamos usando um *loop*(laço de
 ## Select
 *Select* é como *switch*, porém para canais e não é sequencial. Ou seja, o *select* bloqueia os canais até que os dados que especificamos nele seja igual ao *case*(caso) e, aí sim, executa-os. Se houver mais de um caso que satisfaça a condição, então o *select* irá escolher um aleatoriamente.
 
-[Exemplo 01](./exemplos/cap21/Select/exemplo01)
+[Exemplo 01](./exemplos/cap21/Select/exemplo01/select.go)
 
-[Exemplo 02](./exemplos/cap21/Select/exemplo02)
+[Exemplo 02](./exemplos/cap21/Select/exemplo02/select.go)
 
-[Exemplo 03](./exemplos/cap21/Select/exemplo03)
+[Exemplo 03](./exemplos/cap21/Select/exemplo03/select.go)
 
 ## Expressão *comma ok*
 Como já mencionado antes é possível atribuir um segundo parâmetro aos canais para que possamos saber se estão abertos ou fechados e evitar que dados errados sejam lidos pelo canal, esse parâmetro é chamado de *comma ok*. O *comma ok* também é usado para *map* para que possamos saber se quando recebemos um valor 0 é porque foi passado esse valor ao *map*, ou trata-se de um valor que está faltando. Logo, para realizar essa tarefa usa-se uma variável, normalmente booleana, com nome `ok` e se ela for `true` significa que o valor foi de fato passado ao *map*, caso contrário, se for `false`, significa que o valor, no caso 0, representa um valor faltando. [Referência](https://golang.org/doc/effective_go#maps)
