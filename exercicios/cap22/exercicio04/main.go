@@ -25,7 +25,7 @@ func gen(q chan<- int) <-chan int { // irá retornar um canal receiver, só pode
 			c <- i // alimentando o canal c com inteiros de 0 a 99
 		}
 		close(c)
-		q <- 0 // alimento o canal q com 0
+		q <- 0 // alimento o canal q com 0. Será o sinal que enviarei para parar o programa.
 	}()
 
 	return c
