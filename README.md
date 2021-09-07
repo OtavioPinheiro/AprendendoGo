@@ -31,6 +31,7 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [Convergência](#convergência)
 - [Divergência](#divergência)
 - [Context](#context)
+- [Tratamento de erros](#tratamento-de-erros)
 - [Referências](#referências)
   
 # O que é Go Lang?
@@ -891,6 +892,9 @@ Em servidores Go, cada solicitação(*request*) recebida é tratada em sua próp
 - [Exemplo usando a função WithDeadline()](./exemplos/cap21/context/exemplo03/context.go) -> [Referência](https://play.golang.org/p/Q6mVdQqYTt)
 - [Exemplo usando a função WithTimeout()](./exemplos/cap21/context/exemplo04/context.go) -> [Referência](https://play.golang.org/p/OuES9sP_yX)
 - [Exemplo usando WithValue()](./exemplos/cap21/context/exemplo05/context.go) -> [Referência](https://play.golang.org/p/8JDCGk1K4P)
+
+# Tratamento de erros
+Em linguagem GO, ao contrário das outras linguagens, não há exceções(*exceptions*). A linguagem tarta essas exceções e erros de uma forma diferente, utiliza o retorno de múltiplos valores das funções para realizar esse tratamento. Então, em uma dada função, existe um valor do tipo *error type* e caso ele seja nulo(*nil*) significa que não houve nenhum erro e o programa pode prosseguir, caso contrário o erro exibido e o programa é interrompido.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
