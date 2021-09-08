@@ -932,6 +932,7 @@ Para que as funções retornem erros customizados, utilizamos:
   
 **Exemplos:**
 - [Exemplo 01 - errors.New()](./exemplos/cap23/errosCustomizados/exemplo01/main.go)
+- [Exemplo 02 - var errors.New()](./exemplos/cap23/errosCustomizados/exemplo02/main.go)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
