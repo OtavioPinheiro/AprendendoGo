@@ -941,6 +941,7 @@ Para que as funções retornem erros customizados, utilizamos:
   - [Outro exemplo](https://golang.org/pkg/net/#OpError)
   - [Outro exemplo](https://golang.org/src/pkg/net/dial.go)
   - [Outro exemplo](https://golang.org/src/pkg/net/net.go)
+  - [Outro exemplo](https://golang.org/src/pkg/encoding/json/decode.go)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
