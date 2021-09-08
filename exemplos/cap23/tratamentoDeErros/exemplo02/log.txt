@@ -1,0 +1,1 @@
+2021/09/07 22:59:33 Erro ocorrido: open ./exemplos/cap23/tratamentoDeErros/exemplo02/no-file.txt: O sistema não pode encontrar o arquivo especificado.

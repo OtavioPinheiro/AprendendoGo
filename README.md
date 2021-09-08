@@ -902,6 +902,22 @@ Em linguagem GO, ao contrário das outras linguagens, não há exceções(*excep
 - [Escrevendo em um arquivo txt](./exemplos/cap23/verificandoErros/exemplo02/main.go)
 - [io.ReadAll()](./exemplos/cap23/verificandoErros/exemplo03/main.go)
 
+## Print & Log
+Opções:
+- `fmt.Println()` -> stdout
+- `log.Println()` -> timestamp
+- `log.SetOutput()`
+- `log.Fatalln()` -> chama a função os.Exit(1)
+- `log.Panicln()` -> é a função println + panic
+- `panic()`
+
+[Código de exemplo](./exemplos/cap23/tratamentoDeErros/exemplo01/main.go)
+
+[Exemplo do SetOutput()](./exemplos/cap23/tratamentoDeErros/exemplo02/main.go)
+
+Fontes:
+- [Go Doc](https://godoc.org/builtin#panic)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
