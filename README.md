@@ -924,6 +924,14 @@ Fonte:
 
 **Exemplos:**
 - [Exemplo 01](./exemplos/cap23/Recover/exemplo01/main.go)
+  
+## Erros com informações adicionais
+Para que as funções retornem erros customizados, utilizamos:
+- `return errors.New()`
+- `return fmt.Errorf()` -> [Documentação](https://golang.org/pkg/builtin/#error)
+  
+**Exemplos:**
+- [Exemplo 01 - errors.New()](./exemplos/cap23/errosCustomizados/exemplo01/main.go)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
