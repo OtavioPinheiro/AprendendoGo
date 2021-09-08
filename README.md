@@ -920,6 +920,7 @@ Fonte:
 
 ## Recover
 - [Blog Golang](https://blog.golang.org/defer-panic-and-recover)
+- [Golang](https://golang.org/pkg/builtin/#recover)
 
 **Exemplos:**
 - [Exemplo 01](./exemplos/cap23/Recover/exemplo01/main.go)
