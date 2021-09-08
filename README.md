@@ -937,7 +937,10 @@ Para que as funções retornem erros customizados, utilizamos:
   - [Outro exemplo](https://golang.org/src/pkg/io/io.go)
 - [Exemplo 03 - fmt.Errorf()](./exemplos/cap23/errosCustomizados/exemplo03/main.go)
 - [Exemplo 04 - var fmt.Errorf()](./exemplos/cap23/errosCustomizados/exemplo04/main.go)
-- [Exemplo 05]()
+- [Exemplo 05](./exemplos/cap23/errosCustomizados/exemplo05/main.go)
+  - [Outro exemplo](https://golang.org/pkg/net/#OpError)
+  - [Outro exemplo](https://golang.org/src/pkg/net/dial.go)
+  - [Outro exemplo](https://golang.org/src/pkg/net/net.go)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
