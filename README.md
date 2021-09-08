@@ -915,8 +915,14 @@ Opções:
 
 [Exemplo do SetOutput()](./exemplos/cap23/tratamentoDeErros/exemplo02/main.go)
 
-Fontes:
+Fonte:
 - [Go Doc](https://godoc.org/builtin#panic)
+
+## Recover
+- [Blog Golang](https://blog.golang.org/defer-panic-and-recover)
+
+**Exemplos:**
+- [Exemplo 01](./exemplos/cap23/Recover/exemplo01/main.go)
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
