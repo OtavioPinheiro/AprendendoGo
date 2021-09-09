@@ -32,6 +32,7 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [Divergência](#divergência)
 - [Context](#context)
 - [Tratamento de erros](#tratamento-de-erros)
+- [Documentação](#documentação)
 - [Testes em Go](#testes-em-go)
 - [Referências](#referências)
   
@@ -944,6 +945,12 @@ Para que as funções retornem erros customizados, utilizamos:
   - [Outro exemplo](https://golang.org/src/pkg/net/net.go)
   - [Outro exemplo](https://golang.org/src/pkg/encoding/json/decode.go)
 
+# Documentação
+Quando falamos em documentação em Go temos as seguintes opções:
+-  [golang.org](https://golang.org/doc) que possui a documentação das bibliotecas padrão do Go
+-  [godoc.org](https://godoc.org) que possui a documentação das bibliotecas padrão e de outras bibliotecas.
+-  Podemos usar o comando `go doc` para ler a documentação na linha de comando.
+-  Outro comando é o `godoc` que também permite ler a documentação na linha de comando, mas possui uma opção que permiti abrir um servidor local para ler a documentação.
 # Testes em Go
 
 
