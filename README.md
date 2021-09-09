@@ -32,6 +32,7 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [Divergência](#divergência)
 - [Context](#context)
 - [Tratamento de erros](#tratamento-de-erros)
+- [Testes em Go](#testes-em-go)
 - [Referências](#referências)
   
 # O que é Go Lang?
@@ -942,6 +943,9 @@ Para que as funções retornem erros customizados, utilizamos:
   - [Outro exemplo](https://golang.org/src/pkg/net/dial.go)
   - [Outro exemplo](https://golang.org/src/pkg/net/net.go)
   - [Outro exemplo](https://golang.org/src/pkg/encoding/json/decode.go)
+
+# Testes em Go
+
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
