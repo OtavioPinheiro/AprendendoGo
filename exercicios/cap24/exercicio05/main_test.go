@@ -1,4 +1,4 @@
-//Links: https://godoc.org/testing
+// Links: https://godoc.org/testing
 // https://www.golang-book.com/books/intro/12
 
 package main
