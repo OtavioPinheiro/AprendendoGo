@@ -958,6 +958,45 @@ O comando `go doc` demonstra a domcumentação de um package, const, func, type,
 ## godoc
 O comando `godoc` é parecido com o `go doc`, porém o que os diferencia é a flag `-http` que possibilita a exibição da documentação em um servidor local. A documentação apresentada por esse comando será semelhante à do [golang.org](https://golang.org/doc). Para executar esse comando escreva no terminal `godoc -http:=<porta-do-servidor-local>`. Para mais informações acessar [godoc.org](https://pkg.go.dev/golang.org/x/tools/cmd/godoc).
 
+## Escrevendo documentação
+Para escrever a documentação de um programa que desenvolvemos, temos que seguir o seguinte padrão descrito em [golang.org](https://blog.golang.org/godoc-documenting-go-code). Basicamente, na linguagem Go, é utilizado a ferramenta `godoc` para a documentação de projetos. O Godoc simplesmente analisa o código-fonte (incluindo os comentários) e produz a documentação como HTML ou texto puro. O resultado final é uma documentação fortemente acoplada ao código que ela documenta. Por exemplo, por meio da interface da web do godoc, você pode navegar da documentação de uma função até sua implementação com um clique.
+
+A convenção é simples: para documentar um tipo(`type`), variável, constante(`const`), função(`func`) ou mesmo um pacote(`package`), escreva um comentário regular diretamente antes de sua declaração, sem nenhuma linha em branco intermediária, ou seja, não pode haver linhas em branco entre o comentário e o código. O Godoc apresentará esse comentário como texto ao lado do item que ele documenta. Por exemplo, esta é a documentação para a função Fprint do pacote fmt:
+
+```go
+// Fprint formats using the default formats for its operands and writes to w.
+// Spaces are added between operands when neither is a string.
+// It returns the number of bytes written and any write error encountered.
+func Fprint(w io.Writer, a ...interface{}) (n int, err error) {
+```
+
+Observe que este comentário é uma frase completa que começa com o nome do elemento que descreve. Essa importante convenção nos permite gerar a documentação em uma variedade de formatos, de texto simples a HTML e páginas de manual do UNIX, e torna a leitura melhor quando as ferramentas a truncam para abreviar, como quando extraem a primeira linha ou frase.
+
+Os comentários sobre as declarações do pacote devem fornecer uma visão geral da documentação do pacote. Esses comentários podem ser curtos, como uma breve descrição do pacote:
+
+```go
+// Package sort provides primitives for sorting slices and user-defined
+// collections.
+package sort
+```
+
+Eles também podem ser detalhados como a visão geral do pacote gob(*gob package*). Esse pacote usa outra convenção para pacotes que precisam de grandes quantidades de documentação introdutória: o comentário do pacote é colocado em seu próprio arquivo, `doc.go`, que contém apenas esses comentários e uma cláusula de pacote.
+
+Ao escrever comentários de pacote de qualquer tamanho, lembre-se de que sua primeira frase aparecerá na lista de pacotes do godoc.
+
+Comentários que não são adjacentes a uma declaração de nível superior são omitidos da saída do godoc, com uma exceção notável. Comentários de nível superior que começam com a palavra "BUG (quem)" são reconhecidos como bugs conhecidos e incluídos na seção "Bugs" da documentação do pacote. A parte "quem" deve ser o nome de usuário de alguém que poderia fornecer mais informações. Por exemplo, este é um problema conhecido do pacote de bytes:
+
+```go
+// BUG(r): The rule Title uses for word boundaries does not handle Unicode punctuation properly.
+```
+
+Às vezes, um *struct*, uma função(*func*), um *type* ou até mesmo um pacote inteiro se torna redundante ou desnecessário (obsoleto), mas deve ser mantido para compatibilidade com programas existentes. Para sinalizar que um identificador não deve ser usado, adicione um parágrafo ao comentário do documento que começa com `Deprecated:` seguido por algumas informações sobre a remoção.
+
+Para mais informações sobre como escrever a documentação acesse [golang.org](https://go.dev/blog/godoc)
+
+## Extra
+Para exibir sua documentação de forma online, acesse o [godoc.com](https://pkg.go.dev/?utm_source=godoc) e, no campo de busca por pacotes Go, cole o link completo do repositório do GitHub onde se encontra o seu software na qual deseja documentar.
+
 # Testes em Go
 
 
