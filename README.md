@@ -951,6 +951,13 @@ Quando falamos em documentação em Go temos as seguintes opções:
 -  [godoc.org](https://godoc.org) que possui a documentação das bibliotecas padrão e de outras bibliotecas.
 -  Podemos usar o comando `go doc` para ler a documentação na linha de comando.
 -  Outro comando é o `godoc` que também permite ler a documentação na linha de comando, mas possui uma opção que permiti abrir um servidor local para ler a documentação.
+
+## go doc
+O comando `go doc` demonstra a domcumentação de um package, const, func, type, var, método, etc. O comando aceita zero, um ou dois argumentos, sendo que se não for passado nenhum argumento(zero argumento) será exibido a documentação do pacote(*package*) da pasta atual, se a pasta não tiver nenhum pacote go será exibido um erro, "*no buildable Go source files in <caminho-da-pasta>*" e se o pacote for um comando(package main), os símbolos exportados do pacote serão eliminados da apresentação a não ser que a *flag* `-cmd` seja fornecida. Para mais informações execute o comando `go help doc`.
+
+## godoc
+O comando `godoc` é parecido com o `go doc`, porém o que os diferencia é a flag `-http` que possibilita a exibição da documentação em um servidor local. A documentação apresentada por esse comando será semelhante à do [golang.org](https://golang.org/doc). Para executar esse comando escreva no terminal `godoc -http:=<porta-do-servidor-local>`. Para mais informações acessar [godoc.org](https://pkg.go.dev/golang.org/x/tools/cmd/godoc).
+
 # Testes em Go
 
 
