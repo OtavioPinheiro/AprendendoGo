@@ -998,7 +998,17 @@ Para mais informações sobre como escrever a documentação acesse [golang.org]
 Para exibir sua documentação de forma online, acesse o [godoc.com](https://pkg.go.dev/?utm_source=godoc) e, no campo de busca por pacotes Go, cole o link completo do repositório do GitHub onde se encontra o seu software na qual deseja documentar.
 
 # Testes em Go
+Testar programas se faz necessário, uma vez que, escrever um programa que faça exatamente o que foi planejado para fazer, todas as vezes, é uma tarefa difícil, as vezes impossível, por isso é necessário testar o programa para verificar se o resultado obtido é o que se esperava receber do programa.
 
+Em Go para realizar testes de pacotes criados previamente, precisamos criar um arquivo go dentro da pasta (ou pacote) que se deseja testar, denominado `<nomeDoPacote>_test.go`.
+Fontes:
+- [Golang Book](https://www.golang-book.com/books/intro/12)
+- [Go Testing](https://pkg.go.dev/testing?utm_source=godoc)
+
+**Exemplos:**
+- [Exemplo 01](./exemplos/cap27/01-testes/exemplo01/main_test.go)
+
+**IMPORTANTE:** Pode ser que seja necessário executar o comando `go mod init <caminhoDoGitHubDoPacoteASerTestado>`. Esse comando irá criar um arquivo chamado `go.mod` que nele há o caminho do módulo a ser testado e a versão da linguagem Go utilizada.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
