@@ -1001,7 +1001,8 @@ Para exibir sua documentação de forma online, acesse o [godoc.com](https://pkg
 Testar programas se faz necessário, uma vez que, escrever um programa que faça exatamente o que foi planejado para fazer, todas as vezes, é uma tarefa difícil, as vezes impossível, por isso é necessário testar o programa para verificar se o resultado obtido é o que se esperava receber do programa.
 
 Em Go para realizar testes de pacotes criados previamente, precisamos criar um arquivo go dentro da pasta (ou pacote) que se deseja testar, denominado `<nomeDoPacote>_test.go`.
-Fontes:
+
+**Fontes:**
 - [Golang Book](https://www.golang-book.com/books/intro/12)
 - [Go Testing](https://pkg.go.dev/testing?utm_source=godoc)
 
