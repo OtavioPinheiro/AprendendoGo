@@ -1002,16 +1002,21 @@ Testar programas se faz necessário, uma vez que, escrever um programa que faça
 
 Em Go para realizar testes de pacotes criados previamente, precisamos criar um arquivo go dentro da pasta (ou pacote) que se deseja testar, denominado `<nomeDoPacote>_test.go`.
 
+**IMPORTANTE:** 
+1. O arquivo go a ser testado e o arquivo de teste precisam estar na mesma pasta e o arquivo de teste precisa ter o nome no formato `<nomeDoPacoteASerTestado>_test.go`.
+2. Pode ser que seja necessário executar o comando `go mod init <caminhoDoGitHubDoPacoteASerTestado>`. Esse comando irá criar um arquivo chamado `go.mod` que nele há o caminho do módulo a ser testado e a versão da linguagem Go utilizada.
+
+## Escrevendo Testes
+Para escrever um teste de uma função, segue-se a seguinte regra: `func TestNomeDaFuncaoASerTestada(t *testing.T) {"Escreva seu teste aqui"}`. Observe que na função de teste, ela sempre deve começar com a palavra *Test*, seguida do nome da função que queremos testar. Essa função sempre receberá um ponteiro testing.T como parâmetro. Podemos escrever quantos testes acharmos necessários para um determinado pacote.
+
+Para executar os testes escritos executamos o comando `go test`, lembrando que no terminal devemos estar dentro da pasta onde estão os testes e o programa principal. Ou podemos executar o comando `go test -v` para visualizar cada teste que foi executado e visualizar qual deles falhou, ou seja, esse comando nos dá uma visão mais detalhada da execução dos testes.
+
 **Fontes:**
 - [Golang Book](https://www.golang-book.com/books/intro/12)
 - [Go Testing](https://pkg.go.dev/testing?utm_source=godoc)
 
 **Exemplos:**
 - [Exemplo 01](./exemplos/cap27/01-testes/exemplo01/main_test.go)
-
-**IMPORTANTE:** 
-1. O arquivo go a ser testado e o arquivo de teste precisam estar na mesma pasta e o arquivo de teste precisa ter o nome no formato `<nomeDoPacoteASerTestado>_test.go`.
-2. Pode ser que seja necessário executar o comando `go mod init <caminhoDoGitHubDoPacoteASerTestado>`. Esse comando irá criar um arquivo chamado `go.mod` que nele há o caminho do módulo a ser testado e a versão da linguagem Go utilizada.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
