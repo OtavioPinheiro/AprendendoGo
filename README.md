@@ -1009,7 +1009,9 @@ Em Go para realizar testes de pacotes criados previamente, precisamos criar um a
 **Exemplos:**
 - [Exemplo 01](./exemplos/cap27/01-testes/exemplo01/main_test.go)
 
-**IMPORTANTE:** Pode ser que seja necessário executar o comando `go mod init <caminhoDoGitHubDoPacoteASerTestado>`. Esse comando irá criar um arquivo chamado `go.mod` que nele há o caminho do módulo a ser testado e a versão da linguagem Go utilizada.
+**IMPORTANTE:** 
+1. O arquivo go a ser testado e o arquivo de teste precisam estar na mesma pasta e o arquivo de teste precisa ter o nome no formato `<nomeDoPacoteASerTestado>_test.go`.
+2. Pode ser que seja necessário executar o comando `go mod init <caminhoDoGitHubDoPacoteASerTestado>`. Esse comando irá criar um arquivo chamado `go.mod` que nele há o caminho do módulo a ser testado e a versão da linguagem Go utilizada.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
