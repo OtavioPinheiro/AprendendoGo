@@ -1019,8 +1019,8 @@ Para executar os testes escritos executamos o comando `go test`, lembrando que n
 **Exemplos:**
 - [Exemplo 01](./exemplos/cap27/01-testes/exemplo01/main_test.go)
 
-# Benchmarks
-
+# *Benchmarks*
+*Benchmarks*, em computação, é o ato de executar um programa de computador a fim de avaliar o desempenho relativo de um objeto, normalmente executando uma série de testes padrão. Em outras palavras, neste contexto, *Benchmark* trata-se de avaliar o desempenho do *software* desenvolvido, assim como suas funções e rotinas.
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
