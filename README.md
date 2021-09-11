@@ -1005,7 +1005,7 @@ Em Go para realizar testes de pacotes criados previamente, precisamos criar um a
 
 **IMPORTANTE:** 
 1. O arquivo go a ser testado e o arquivo de teste precisam estar na mesma pasta e o arquivo de teste precisa ter o nome no formato `<nomeDoPacoteASerTestado>_test.go`.
-2. Pode ser que seja necessário executar o comando `go mod init <caminhoDoGitHubDoPacoteASerTestado>`. Esse comando irá criar um arquivo chamado `go.mod` que nele há o caminho do módulo a ser testado e a versão da linguagem Go utilizada.
+2. Pode ser que seja necessário executar o comando `go mod init <caminhoDoGitHubDoProjeto>`. Esse comando irá criar um arquivo chamado `go.mod` que nele há o caminho do projeto e a versão da linguagem Go utilizada. Vale ressaltar que, para não ter que executar esse comando todas as vezes que for executar um teste em uma pasta diferente, execute o comando de forma que o arquivo `go.mod` fique na raíz do projeto, desta forma, só será preciso realizar esse procedimento apenas uma única vez por projeto. Se preferir executar todas as vezes para cada pasta do projeto, então o comando ficará assim: `go mod init <caminhoDoGitHubDaPastaComOTeste>`.
 
 ## Escrevendo Testes
 Para escrever um teste de uma função, segue-se a seguinte regra: `func TestNomeDaFuncaoASerTestada(t *testing.T) {"Escreva seu teste aqui"}`. Observe que na função de teste, ela sempre deve começar com a palavra *Test*, seguida do nome da função que queremos testar. Essa função sempre receberá um ponteiro testing.T como parâmetro. Podemos escrever quantos testes acharmos necessários para um determinado pacote.
