@@ -647,7 +647,7 @@ func retornaumafuncao() func(int) int {
 
 ## Função Callback
 Função Callback é quando passamos uma função como argumento de outra função.
-[Códgio de exemplo](./exercicios/cap12/cap12_aulaCallback.go)
+[Códgio de exemplo](./exercicios/cap12/callback/cap12_aulaCallback.go)
 
 ## Closure
 Closure é cercar ou capturar um escopo (*scope*) para que possamos utilizá-lo em outro contexto. Closures nos permite salvar dados entre cahmadas de funções e ao mesmo tempo isolar estes dados do resto do código.
@@ -655,7 +655,7 @@ Closure é cercar ou capturar um escopo (*scope*) para que possamos utilizá-lo 
 ## Recursividade
 Funções recursivas são aquelas funções que chamam a si própria. Os exemplos mais comuns de recursividade são fatoriais, matrioskas, efeito droste e fractais.
 
-[Código de exemplo](./exercicios/cap12/cap12_aulaRecursividade.go)
+[Código de exemplo](./exercicios/cap12/recursividade/cap12_aulaRecursividade.go)
 
 # Defer
 *Defer*, do inglês, significa adiar. Na linguagem de programação Go, *Defer* é um *statement* (instrução) que é colocada antes de uma outra instrução, fazendo com que esta seja executada por último. Se houverem mais de um *Defer*, então o primeiro *Defer* que o compilador encontrar será o último a ser executado, como se fosse um FILO (First In, Last Out).
@@ -724,8 +724,8 @@ func main() {
 
 **Polimorfismo** em Go significa utilizar uma mesma função para mais de um tipo (`type`) se os mesmos fizerem parte da mesma interface.
 
-- [**Código de exemplo 1**](./exercicios/cap12/cap12_interface_polimorfismo.go)
-- [**Código de exemplo 2**](./exercicios/cap12/cap12_interface_polimorfismo_2.go)
+- [**Código de exemplo 1**](./exercicios/cap12/interface_polimorfismo/01/cap12_interface_polimorfismo.go)
+- [**Código de exemplo 2**](./exercicios/cap12/interface_polimorfismo/02/cap12_interface_polimorfismo_2.go)
 
 # Ponteiros
 Ponteiros, em linguagem de programação, é um objeto cujo valor aponta (ou refere-se) para outro valor armazenado em algum lugar da memória do computador que usa esse endereço de memória. Para obter o valor salvo nessa localização da memória, usa-se um processo chamado *dereferencing*. Assumindo que `x` seja uma variável qualquer e `p` seja um ponteiro que refere-se ao valor armazenado em `x`, então para exibir esse valor, por meio do ponteiro, usamos `*p`.
@@ -739,20 +739,20 @@ Como visto no exemplo acima, existe um atalho para referenciar um valor de uma *
 Em Go é possível transformar uma estrutura de dados (*struct*) em JSON por meio do pacote `encoding/json` usando a função `Marshal`. É importante frisar que para que os campos da *struct* sejam exportados para *JSON*, a letra inicial dos campos e do nome da *struct* precisam estar em letra maiúscula. Logo, em Go, tudo que possuir a letra inicial maiúscula poderá ser exportado e estará visível para outros pacotes (*packages*).
 
 **Exemplo:**
-[Exemplo](./exemplos/cap16/exemplo_cap16_Marshal.go)
+[Exemplo](./exemplos/cap16/Marshal/exemplo_cap16_Marshal.go)
 
 Ao invés de utilizar a função `Marshal` é possível usar a função `Encode` para transformar um *JSON* em *struct*. A diferença entre essas funções é a forma como se usa cada uma. Na função `Marshal` o resultado é salvo em uma variável que pode ser manipula como o usuário desejar, já na `Encode` o resultado estará vinculado a uma interface que sempre será chamada quando usarmos a variável na qual está as informações obtidas do *JSON*.
 [Mais informações sobre Marshal](https://pkg.go.dev/encoding/json#Marshal)
 
 **Exemplo:**
-[Exemplo](./exemplos/cap16/exemplo_cap16_Encode.go)
+[Exemplo](./exemplos/cap16/Encode/exemplo_cap16_Encode.go)
 
 ## Transformando JSON para *struc* em Go
 De maneira similar a transformar uma *struct* em JSON, também é possível realizar o processo inverso, ou seja, capturar um *JSON* e transportar as informações para uma *struc* em Go utilizando o pacote `enconding/json` e a função `Unmarshal` ou `Decode`.
 [Mais informações sobre Unmarshal](https://pkg.go.dev/encoding/json#Unmarshal)
 
 **Exemplo:**
-[Exemplo](./exemplos/cap16/exemplo_cap16_Unmarshal.go)
+[Exemplo](./exemplos/cap16/Unmarshal/exemplo_cap16_Unmarshal.go)
 
 Vale lembrar que no exemplo acima utilizamos *tags*. As *tags* servem para mapear os campos do *JSON* com os campos da *struc* que estará recebendo essas informações.
 
@@ -761,7 +761,7 @@ Bcrypt é um método de criptografia do tipo hash para senhas baseado no *BlowFi
 
 Este método apresenta uma maior segurança em relação a maioria dos outros métodos criptográficos, pois é resistente à ataques de força bruta. [Mais informações](https://pt.wikipedia.org/wiki/Bcrypt#:~:text=bcrypt%20%C3%A9%20um%20m%C3%A9todo%20de,para%20senhas%20baseado%20no%20Blowfish.&text=O%20algoritmo%20bcrypt%20foi%20implementado,fun%C3%A7%C3%A3o%20%22crypt%22%20do%20UNIX.)
 
-[Exemplo de uso](./cap16/../exemplos/cap16/exemplo_cap16_bcrypt.go)
+[Exemplo de uso](./cap16/../exemplos/cap16/bcrypt/exemplo_cap16_bcrypt.go)
 
 # Concorrência
 Concorrência, no sentido de programação concorrente ou programação simultânea, é um paradigma de programação para a construção de programas de computador que fazem uso da execução simultânea de várias tarefas computacionais interativas, que podem ser implementadas como programas separados ou como um conjunto de *threads* criadas por um único programa. [Wikipédia - Programação concorrente](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_concorrente#:~:text=Programa%C3%A7%C3%A3o%20concorrente%20ou%20programa%C3%A7%C3%A3o%20simult%C3%A2nea,threads%20criadas%20por%20um%20%C3%BAnico)
