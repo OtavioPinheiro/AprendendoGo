@@ -34,6 +34,7 @@ Aprendendo GO Lang por meio de vídeos tutoriais.
 - [Tratamento de erros](#tratamento-de-erros)
 - [Documentação](#documentação)
 - [Testes em Go](#testes-em-go)
+- [Benchmarks](#benchmarks)
 - [Referências](#referências)
   
 # O que é Go Lang?
@@ -1017,6 +1018,9 @@ Para executar os testes escritos executamos o comando `go test`, lembrando que n
 
 **Exemplos:**
 - [Exemplo 01](./exemplos/cap27/01-testes/exemplo01/main_test.go)
+
+# Benchmarks
+
 
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
