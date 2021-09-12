@@ -1025,6 +1025,32 @@ Para executar os testes escritos executamos o comando `go test`, lembrando que n
 **Exemplo:**
 -[Exemplo 02](./exemplos/cap27/01-testes/exemplo02/main_test.go)
 
+## Testes como exemplos
+Nessa situação executamos os testes como exemplos, que são os mesmos exemplos que aparecem na documentação Godoc.
+
+Exemplos de Godoc são trechos do código Go que são exibidos como documentação do pacote e que são verificados executando-os como testes. Eles também podem ser executados por um usuário que visita a página da web godoc para o pacote e clica no botão "Executar" associado. Ter documentação executável para um pacote garante que as informações não ficarão desatualizadas à medida que a API muda. [Fonte: Testable examples in Go](https://go.dev/blog/examples).
+
+Quando formos escrever essa documentação executável devemos usar a seguinte nomenclatura: `func ExampleNomeDaFuncao() {}`. Onde o nome da função deve começar com *Example* e logo em seguida deve haver um comentário informando o resultado esperado pela execução da função, no formato `// Output: resultado`. Vale lembrar que para visualizar o exemplo na documentação executamos o código: `godoc -http :<porta>` e para executá-los, assim como fazemos para testes, rodamos o comando `go test ./ ...`.
+
+**Exemplos:**
+
+```go
+package stringutil_test
+
+import (
+    "fmt"
+
+    "golang.org/x/example/stringutil"
+)
+
+func ExampleReverse() {
+    fmt.Println(stringutil.Reverse("hello"))
+    // Output: olleh
+}
+```
+
+- [Exemplo 02 - Testes como exemplos](./exemplos/cap27/01-testes/exemplo03/main_test.go)
+
 # *Benchmarks*
 *Benchmarks*, em computação, é o ato de executar um programa de computador a fim de avaliar o desempenho relativo de um objeto, normalmente executando uma série de testes padrão. Em outras palavras, neste contexto, *Benchmark* trata-se de avaliar o desempenho do *software* desenvolvido, assim como suas funções e rotinas.
 
