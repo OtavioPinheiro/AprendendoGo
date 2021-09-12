@@ -1030,7 +1030,7 @@ Nessa situação executamos os testes como exemplos, que são os mesmos exemplos
 
 Exemplos de Godoc são trechos do código Go que são exibidos como documentação do pacote e que são verificados executando-os como testes. Eles também podem ser executados por um usuário que visita a página da web godoc para o pacote e clica no botão "Executar" associado. Ter documentação executável para um pacote garante que as informações não ficarão desatualizadas à medida que a API muda. [Fonte: Testable examples in Go](https://go.dev/blog/examples).
 
-Quando formos escrever essa documentação executável devemos usar a seguinte nomenclatura: `func ExampleNomeDaFuncao() {}`. Onde o nome da função deve começar com *Example* e logo em seguida deve haver um comentário informando o resultado esperado pela execução da função, no formato `// Output: resultado`. Vale lembrar que para visualizar o exemplo na documentação executamos o código: `godoc -http :<porta>` e para executá-los, assim como fazemos para testes, rodamos o comando `go test ./ ...`.
+Quando formos escrever essa documentação executável devemos usar a seguinte nomenclatura: `func ExampleNomeDaFuncao() {}`. Onde o nome da função deve começar com *Example* e logo em seguida deve haver um comentário informando o resultado esperado pela execução da função, no formato `// Output: resultado`. Vale lembrar que para visualizar o exemplo na documentação executamos o código: `godoc -http :<porta>` e para executá-los, assim como fazemos para testes, rodamos o comando `go test`, ou para executar todos os testes da pasta de uma vez, usamos `go test ./ ...`.
 
 **Lembrete:** Para instalar o *godoc* use o comando: `go get golang.org/x/tools/cmd/godoc`
 
