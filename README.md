@@ -1068,6 +1068,18 @@ Para executar os testes de *benchmarks* usamos o comando `go test -bench .` para
 **Exemplos:**
 -[Exemplo 01](./exemplos/cap27/02-02-benchmark/exemplo01/main_test.go/)
 
+# Cobertura dos testes
+Para saber quatos por cento do código foi testado, podemos executar o comando `go test -coverprofile <arquivo>`, onde `<arquivo>` é o nome do arquivo que será salvo contendo o relatório da cobertura de testes. Caso não deseje salvar o relatório de cobertura execute apenas `go test -cover`. Ainda é possível converter o arquivo com o relatório de cobertura para `.html` executando o comando `go tool cover -html=<arquivo>`. Nesse arquivo HTML, além de obetermos a porcentagem do código que está sendo coberta por testes, podemos observar que a parte do código que está em vermelho não está sendo coberta por testes, enquanto que a parte em verde está.
+
+Vale ressaltar que você deverá acesar a pasta, pelo terminal, onde os arquivos de teste se encontram, caso queira gerar o arquivo com o relatório de cobertura, esse arquivo deverá ter a extensão `.out` e, se você estiver usando o Sistema Operacional(SO) Windows, você deverá fornecer o nome do arquivo entre aspas duplas(""). Logo temos:
+
+| Comando | Resultado |
+|---------|-----------|
+| `go test -cover` | Esse comando irá avaliar quantos por cento do código foram cobertos por testes. |
+| `go test -coverprofile <nomeDoArquivo>` | Esse comando irá executar o comando `go test -cover` e salvará o resultado em um arquivo cuja extensão deve ser `.out`. |
+| `go tool cover -html=<nomeDoArquivo>` | Esse comando seleciona um arquivo `.out` que possui um relatório de cobertura de testes e o converte para `.html` e o exibe no navegador. O arquivo HTML não será salvo. |
+| `go tool cover -help` | Exibe uma documentação de ajuda para entender melhor as flags e os comandos do `go tool cover`. |
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
