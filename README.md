@@ -820,6 +820,7 @@ Abaixo seguem alguns comandos da linguagem Go e a sua descrição.
 | go env | Variáveis de sistema relacionadas à Linguagem Go |
 | go help | Exibe uma lista de comandos utilizados na linguagem Go e suas descrições. É possível passar um nome de pacote como parâmetro para que seja exibido mais detalhes sobre o pacote. |
 | go fmt | Executa `gofmt` nos pacotes principais(fontes). |
+| gofmt | Esse comando realiza a formatação do código dos arquivos `.go` presentes nas pastas. |
 | go run | Compila e executa um programa Go. É possível executar `go run *.go` para que todos os programas com a extensão `.go` sejam executados de uma vez. |
 | go build | Compila pacotes e dependências. Ou seja, em casos de arquivos executáveis(que possuem a `func main`) gera um arquivo binário a partir do arquivo `.go` e, a partir desse arquivo, gera um executável e o salva no diretório(pasta) atual. Caso haja erros no programa `.go` o arquivo executável não será gerado e o erro será informado via terminal. Em casos de pacotes, gera um arquivo binário e, caso haja erros, informa-os e, ao final, descarta o arquivo executável.|
 | go install | Compila e instala os pacotes e as dependências. De forma mais detalhada, para um arquivo executável, fará o *build*, em seguida, nomeará o arquivo com o nome do diretório atual e, por fim, salvará o arquivo binário em `$GOPATH/bin`. Para um pacote, fará o *build*, salvará o arquivo binário em `$GOPATH/pkg` e criará *archive files*, arquivos com extensão `.a` que são os arquivos pré-compilados utilizados pelos *imports*. |
@@ -832,7 +833,8 @@ Abaixo seguem alguns comandos da linguagem Go e a sua descrição.
 | go list | Lista todos os pacotes instalados. |
 | go test | Testa os pacotes |
 | go tool | Executa uma ferramenta específica. |
-| go vet | Executa `go tool vet` nos pacotes. |
+| go vet | Executa `go tool vet` nos pacotes. Esse comando examina o cógido fonte dos arquivos `.go` e relata construções suspeitas, como chamadas à função Printf cujos os argumentos não se alinham com a sequência de formato esperada. O `vet` usa a heurística de que não há garantias de que todos os relatórios são problemas genuínos, mas podem conter erros que não foram capturados pelos compiladores. |
+| golint | Esse comando examina os arquivos `.go` a procura de códigos mal escritos (*coding style* ruim). Caso esse comando não esteja previamente instalado, execute `go get golang.org/x/lint/golint` para instalá-lo. |
 
 # Canais
 Canais em Go é uma maneira de transmitir dados entre Goroutines. Há dois tipos de *Go Channels*, os *unbuffered*(sem buffer) e os *buffered*(com buffer). Da maneira *unbuffered* é a maneira padrão dos canais e significa que os canais só aceitarão enviar os dados de uma *goroutine* para outra se houver um receptor desses dados, ou seja, em palavras simples, uma *goroutine* se encarregará de enviar os dados pelo *channel* e outra *goroutine* se encarregará de receber esses dados. Da maneira *buffered* não é necessário ter uma *goroutine* para receber os dados enviados, porém aceita até um limite de valores para ser enviado dessa maneira.
