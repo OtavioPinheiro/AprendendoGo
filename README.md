@@ -1019,6 +1019,12 @@ Para executar os testes escritos executamos o comando `go test`, lembrando que n
 **Exemplos:**
 - [Exemplo 01](./exemplos/cap27/01-testes/exemplo01/main_test.go)
 
+## Testes em série
+É possível escrever testes em série, em Go chamamos isso de testes em tabela e o usamos para testar vários cenários de uma mesma funcionalidade.
+
+**Exemplo:**
+-[Exemplo 02](./exemplos/cap27/01-testes/exemplo02/main_test.go)
+
 # *Benchmarks*
 *Benchmarks*, em computação, é o ato de executar um programa de computador a fim de avaliar o desempenho relativo de um objeto, normalmente executando uma série de testes padrão. Em outras palavras, neste contexto, *Benchmark* trata-se de avaliar o desempenho do *software* desenvolvido, assim como suas funções e rotinas.
 
