@@ -1080,6 +1080,8 @@ Vale ressaltar que você deverá acesar a pasta, pelo terminal, onde os arquivos
 | `go tool cover -html=<nomeDoArquivo>` | Esse comando seleciona um arquivo `.out` que possui um relatório de cobertura de testes e o converte para `.html` e o exibe no navegador. O arquivo HTML não será salvo. |
 | `go tool cover -help` | Exibe uma documentação de ajuda para entender melhor as flags e os comandos do `go tool cover`. |
 
+**Observação:** Normalmente, em projetos reais, não se atinge uma cobertura de 100%, aceita-se uma porcentage de 70 a 80%. Isso pode variar dependendo do projeto.
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
