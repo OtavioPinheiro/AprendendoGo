@@ -1032,6 +1032,8 @@ Exemplos de Godoc são trechos do código Go que são exibidos como documentaç�
 
 Quando formos escrever essa documentação executável devemos usar a seguinte nomenclatura: `func ExampleNomeDaFuncao() {}`. Onde o nome da função deve começar com *Example* e logo em seguida deve haver um comentário informando o resultado esperado pela execução da função, no formato `// Output: resultado`. Vale lembrar que para visualizar o exemplo na documentação executamos o código: `godoc -http :<porta>` e para executá-los, assim como fazemos para testes, rodamos o comando `go test ./ ...`.
 
+**Lembrete:** Para instalar o *godoc* use o comando: `go get golang.org/x/tools/cmd/godoc`
+
 **Exemplos:**
 
 ```go
@@ -1049,7 +1051,7 @@ func ExampleReverse() {
 }
 ```
 
-- [Exemplo 02 - Testes como exemplos](./exemplos/cap27/01-testes/exemplo03/main_test.go)
+- [Exemplo 03 - Testes como exemplos](./exemplos/cap27/01-testes/exemplo03/main_test.go)
 
 # *Benchmarks*
 *Benchmarks*, em computação, é o ato de executar um programa de computador a fim de avaliar o desempenho relativo de um objeto, normalmente executando uma série de testes padrão. Em outras palavras, neste contexto, *Benchmark* trata-se de avaliar o desempenho do *software* desenvolvido, assim como suas funções e rotinas.

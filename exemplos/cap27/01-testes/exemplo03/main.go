@@ -1,5 +1,9 @@
+// Package main é o padrão
 package main
 
+// Lembrete: Para visualizar no godoc -http=<porta>, siga:
+// 1 - Instale o godoc se já não estiver instalado
+// 2 - Mude o nome do package, não pode ser main.
 import "fmt"
 
 func main() {
