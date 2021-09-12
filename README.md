@@ -1058,6 +1058,16 @@ func ExampleReverse() {
 # *Benchmarks*
 *Benchmarks*, em computação, é o ato de executar um programa de computador a fim de avaliar o desempenho relativo de um objeto, normalmente executando uma série de testes padrão. Em outras palavras, neste contexto, *Benchmark* trata-se de avaliar o desempenho do *software* desenvolvido, assim como suas funções e rotinas.
 
+Assim como nos testes, as funções que serão avaliadas nos testes de *benchmarks* precisam seguir uma nomenclatura específica, neste caso é: `func BenchmarkNomeDaFuncao(b *testing.B){}`. Observa-se que estamos utilizando o pacote `testing` e passando como parâmetro um ponteiro do tipo `testing.B`, parecido com que já fazíamos com os testes comuns.
+
+Para executar os testes de *benchmarks* usamos o comando `go test -bench .` para executar todas as funções de *benchmark* presentes na pasta ou `go test -bench <nomeDaFuncao>` para testar apenas um única função.
+
+**Dica:**
+- Execute `go help testflag` para ver a documentação sobre as flags que podem ser passadas nos comandos `go test`.
+
+**Exemplos:**
+-[Exemplo 01](./exemplos/cap27/02-02-benchmark/exemplo01/main_test.go/)
+
 # Referências
 - Korbes, Ellen. **Aprenda Go 🇧🇷**. Aprenda Go. Disponível em: https://www.youtube.com/playlist?list=PLCKpcjBB_VlBsxJ9IseNxFllf-UFEXOdg
 - Go by example. **Go by Example**. Disponível em: https://gobyexample.com/
